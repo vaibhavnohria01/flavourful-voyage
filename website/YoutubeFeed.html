@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Youtube Feed</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="font.css">
+    </head>
+            <body class="body-edit">
+                <nav class="navbar">
+                    <div class="navdiv" id="navigation">
+                      <div class="logo"><a href="index.html">FlavourfulVoyage</a></div>
+                      <ul>
+                        <li><a href="index.html" aria-label="Homepage">Homepage</a></li>    
+                        <li><a href="Me.html" aria-label="About The Author">About The Author</a></li>
+                        <li><a href="AboutUs.html" aria-label="About Us">About Us</a></li>
+                        <li><a href="feedback.html" aria-label="Feedback">Feedback</a></li>
+                        <li><a href="SourceLog.html" aria-label="Sourcelog">Sourcelog</a></li>
+                        <li><a href="SiteMap.html" aria-label="Site Map">Site Map</a></li>
+                        <li><a href="YoutubeFeed.html" aria-label="YouTube Feed">YouTube Feed</a></li>
+                        <li><a href="Quiz.html" aria-label="Game">Game</a></li>
+                      </ul>
+                    </div>
+                  </nav>
+                  <div class="heading-container">
+                    <img src="images/moon.png" alt="moon for dark mode" id="icon2">
+                    <img src="images/top_icon.png" alt="icon to go to top of the screen" id="scroll-to-top">
+                    <h1 class="heading">YouTube Feed</h1>
+                </div>
+                <div id="curator-feed-default-feed-layout">
+                    <a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a>
+                </div>
+                <script>
+                    /* curator-feed-default-feed-layout */
+                    (function(){
+                    var i,e,d=document,s="script";i=d.createElement("script");i.async=1;i.charset="UTF-8";
+                    i.src="https://cdn.curator.io/published/884fb09b-74c2-4f26-a61c-aa92a0104ad1.js";
+                    e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+                    })();
+                    var icon2 = document.getElementById("icon2");
+        icon2.onclick = function(){
+          document.body.classList.toggle("dark-theme");
+          document.querySelectorAll('img').forEach(function(img) {img.classList.toggle("grayscale");});
+          if(document.body.classList.contains("dark-theme")){
+            icon2.src = "images/sun.png";
+          }
+          else{
+            icon2.src = "images/moon.png";
+          }
+
+          icon2.classList.add("clicked");
+          setTimeout(function(){icon2.classList.remove("clicked");}, 200);
+        }
+
+                        document.getElementById("scroll-to-top").addEventListener("click", function(){
+                         window.scrollTo({top:0, behavior:"smooth"});
+                        });
+                </script>
+            </body>
+</html>
+
+    

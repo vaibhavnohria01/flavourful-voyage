@@ -1,0 +1,425 @@
+/* Resetting text decoration for all elements */
+*{
+  text-decoration: none;
+}
+
+/* Styling for the navigation bar */
+.navbar{
+  flex: l; /* Flex property set to l, maybe it's a typo? */
+  text-align: right; /* Aligning text to right */
+  background: rgb(53, 113, 244); /* Setting background color */
+  font-family: calibri; /* Setting font family */
+  padding-right: 15px; /* Adding right padding */
+  padding-left: 15px; /* Adding left padding */
+  top: 0px; /* Setting navbar to top */
+}
+
+/* Styling for navigation bar container */
+.navdiv{
+  display: flex; /* Using flexbox for layout */
+  align-items: center; /* Aligning items vertically */
+  justify-content: space-between; /* Spacing items evenly */
+  width: 100%; /* Setting width to 100% */
+}
+
+/* Styling for logo */
+.logo a{
+  font-size: 35px; /* Setting font size */
+  font-weight: 600; /* Setting font weight */
+  color: white; /* Setting text color */
+}
+
+/* Styling for list items */
+li{
+  list-style: none; /* Removing default list style */
+  display: inline-block; /* Displaying list items inline */
+}
+
+/* Styling for links within list items */
+li a{
+  color: white; /* Setting text color */
+  font-size: 18px; /* Setting font size */
+  font-weight: bold; /* Setting font weight */
+  margin-right: 25px; /* Adding right margin */
+}
+
+/* Styling for body */
+.body-edit {
+  background-color: rgba(251, 226, 133, 0.29); /* Setting background color */
+  margin: 0; /* Removing default margin */
+  padding: 0; /* Removing default padding */
+}
+
+/* Styling for body in dark theme */
+body.dark-theme{
+  background-color: #7F7F7FC5; /* Setting background color */
+}
+
+/* Styling for navbar in dark theme */
+body.dark-theme .navbar {
+  background-color: #27364E; /* Darker background color for night mode */
+  color: rgb(220, 220, 220); /* Lighter text color for night mode */
+}
+
+/* Styling for icon */
+#icon{
+width: 30px; /* Setting width */
+cursor: pointer; /* Changing cursor to pointer */
+position: fixed; /* Positioning fixed */
+left: 1%; /* Aligning to left */
+transform: translateY(5px); /* Translating vertically */
+width: 50px; /* Setting width */
+height: auto; /* Setting height to auto */
+transition: transform 0.2s ease, opacity 0.2s ease; /* Adding transition */
+border-radius: 50%; /* Adding border radius */
+z-index: 999; /* Setting z-index */
+}
+
+/* Styling for clicked icon */
+#icon.clicked {
+  transform: scale(0.1) rotate(180deg); /* Transforming on click */
+  opacity: 0; /* Setting opacity to 0 */
+  filter: invert(100%);  /* Inverting color */
+}
+
+/* Styling for icon 2 */
+#icon2{
+  cursor: pointer; /* Changing cursor to pointer */
+  position: fixed; /* Positioning fixed */
+  left: 1%; /* Aligning to left */
+  transform: translateY(5px); /* Translating vertically */
+  width: 50px; /* Setting width */
+  height: auto; /* Setting height to auto */
+  transition: transform 0.2s ease, opacity 0.2s ease; /* Adding transition */
+  border-radius: 50%; /* Adding border radius */
+  z-index: 999; /* Setting z-index */
+}
+
+/* Styling for clicked icon 2 */
+#icon2.clicked {
+  transform: scale(0.1) rotate(180deg); /* Transforming on click */
+  opacity: 0; /* Setting opacity to 0 */
+  filter: invert(100%);  /* Inverting color */
+}
+
+/* Styling for heading container */
+.heading-container{
+  position: relative; /* Positioning relative */
+  text-align: center; /* Aligning text to center */
+}
+
+/* Styling for heading container with image */
+.heading-container-image {
+  position: relative; /* Positioning relative */
+  text-align: center; /* Aligning text to center */
+  display: flex; /* Using flexbox for layout */
+  justify-content: center; /* Horizontally centering */
+  align-items: center; /* Vertically centering */
+  margin-top: 20px; /* Adding margin at the top */
+}
+
+/* Styling for heading image */
+#heading-image {
+  max-width: 60%; /* Setting maximum width */
+  height: auto; /* Setting height to auto */
+  max-height: 50%; /* Setting maximum height */
+  display: block; /* Displaying as block element */
+  margin-top: 20px; /* Adding margin at the top */
+}
+
+/* Styling for scroll-to-top button */
+#scroll-to-top {
+width: 50px; /* Setting width */
+height: auto; /* Setting height to auto */
+cursor: pointer; /* Changing cursor to pointer */
+position: fixed; /* Positioning fixed */
+right: 10px; /* Aligning to right */
+transition: opacity 0.2s ease; /* Adding transition effect */
+opacity: 0.6; /* Setting opacity */
+z-index: 999; /* Setting z-index */
+}
+
+/* Styling for scroll-to-top button on hover */
+#scroll-to-top:hover {
+filter: brightness(0.7); /* Adjusting brightness on hover */
+opacity: 1; /* Setting opacity on hover */
+}
+
+/* Styling for circle container */
+.circle-container {
+  flex: 3; /* Setting flex property */
+  padding: 0 20px; /* Adding padding */
+  position:relative; /* Positioning relative */
+  text-align: center; /* Aligning text to center */
+  margin-top: 50px;    /* Adding margin at the top */
+  margin-bottom: 50px; /* Adding margin at the bottom */
+}
+
+/* Styling for circle */
+.circle {
+  width: 650px; /* Setting width */
+  height: 650px; /* Setting height */
+  border-radius: 50%; /* Adding border radius */
+  background-color: #FFD1E3; /* Setting background color */
+  display: flex; /* Using flexbox for layout */
+  justify-content: center; /* Horizontally centering */
+  align-items: center; /* Vertically centering */
+  margin: 0 auto; /* Centering horizontally */
+}
+
+/* Styling for text within circle */
+.circle p {
+  font-size: 25px; /* Setting font size */
+  color: #333; /* Setting text color */
+  max-width: 80%; /* Setting maximum width */
+}
+
+/* Styling for circle container pseudo-element */
+.circle-container::after {
+  content: ''; /* Adding content */
+  position: absolute; /* Positioning absolute */
+  left: 0; /* Aligning to left */
+  bottom: -140px; /* Setting position */
+  width: 100%; /* Setting width */
+  height: 50px; /* Setting height */
+  background-image: url('images/border2.png'); /* Adding background image */
+  background-repeat: repeat-x; /* Repeating image horizontally */
+  background-size: 50px 50px; /* Setting background size */
+  z-index: -1; /* Setting z-index */
+}
+
+/* Styling for square container */
+.square-container {
+  text-align: center; /* Aligning text to center */
+  margin-top: 50px;    /* Adding margin at the top */
+  margin-bottom: 50px; /* Adding margin at the bottom */
+}
+
+/* Styling for square */
+.square {
+  width: 620px; /* Setting width */
+  height: 620px; /* Setting height */
+  border-radius: 50px; /* Adding border radius */
+  background-color: #FFD1E3; /* Setting background color */
+  display: flex; /* Using flexbox for layout */
+  justify-content: center; /* Horizontally centering */
+  align-items: center; /* Vertically centering */
+  margin: 0 auto; /* Centering horizontally */
+}
+
+/* Styling for text within square */
+.square p {
+  font-size: 25px; /* Setting font size */
+  color: #333; /* Setting text color */
+  max-width: 80%; /* Setting maximum width */
+}
+
+/* Styling for square container pseudo-element */
+.square-container::after {
+  content: ''; /* Adding content */
+  position: absolute; /* Positioning absolute */
+  left: 0; /* Aligning to left */
+  bottom: -320px; /* Setting position */
+  width: 100%; /* Setting width */
+  height: 50px; /* Setting height */
+  background-image: url('images/border2.png'); /* Adding background image */
+  background-repeat: repeat-x; /* Repeating image horizontally */
+  background-size: 50px 50px; /* Setting background size */
+  z-index: -1; /* Setting z-index */
+}
+
+/* Styling for table */
+table {
+  font-family: arial, sans-serif; /* Setting font family */
+  border-collapse: collapse; /* Collapsing table borders */
+  width: 100%; /* Setting width */
+}
+
+/* Styling for table cells and headers */
+td, th {
+  border: 1px solid #ffffff; /* Adding border */
+  text-align: left; /* Aligning text to left */
+  padding: 8px; /* Adding padding */
+}
+
+/* Styling for even rows in table */
+tr:nth-child(even) {
+  background-color: #dddddd; /* Setting background color */
+}
+
+/* Styling for video container */
+.video-container {
+  width: 90%; /* Setting width */
+  margin: 0 auto; /* Centering horizontally */
+  text-align: center; /* Aligning text to center */
+}
+
+/* Styling for videos within video container */
+.video-container video {
+  width: 100%; /* Setting width to 100% */
+  max-width: 900px; /* Setting maximum width */
+  display: block; /* Displaying as block element */
+  margin: 0 auto; /* Centering horizontally */
+}
+
+/* Styling for text and photo container */
+.text-photo-container {
+  display: flex; /* Using flexbox for layout */
+  align-items: center; /* Aligning items vertically */
+}
+
+/* Styling for text within text and photo container */
+.text {
+  flex: 1; /* Setting flex property */
+  font-size: 30px; /* Setting font size */
+  margin-right: 70px; /* Adding right margin */
+  padding-left: 150px; /* Adding left padding */
+}
+
+/* Styling for photo gallery image */
+.photo-gallery-image {
+  flex: 1; /* Setting flex property */
+  text-align: right; /* Aligning text to right */
+}
+
+/* Styling for images within photo gallery image */
+.photo-gallery-image img {
+  max-width: 400px; /* Setting maximum width */
+  max-height: 400px; /* Setting maximum height */
+  height: auto; /* Setting height to auto */
+  padding-right: 150px; /* Adding right padding */
+}
+
+/* Styling for grayscale filter */
+.grayscale {
+  filter: grayscale(60%); /* Applying grayscale filter */
+}
+
+/* Styling for favourite things container */
+.favourite-things-container {
+  display: flex; /* Using flexbox for layout */
+  align-items: center; /* Aligning items vertically */
+  padding: 20px; /* Adding padding */
+}
+
+/* Styling for photo text */
+.photo-text {
+  flex: 1; /* Setting flex property */
+  font-size: 30px; /* Setting font size */
+  margin-right: 70px; /* Adding right margin */
+  margin-left: 30px; /* Adding left margin */
+  padding-right: 150px; /* Adding right padding */
+}
+
+/* Styling for photo within favourite things container */
+.photo {
+  flex: 1; /* Setting flex property */
+  text-align: right; /* Aligning text to right */
+}
+
+/* Styling for images within favourite things container */
+.favourite-things-container img {
+  max-width: 400px; /* Setting maximum width */
+  max-height: 400px; /* Setting maximum height */
+  height: auto; /* Setting height to auto */
+  padding-left: 150px; /* Adding left padding */
+}
+
+/* Styling for button container */
+.btn-container {
+  display: flex; /* Using flexbox for layout */
+  justify-content: center; /* Horizontally centering */
+  margin-top: 20px; /* Adding top margin */
+  margin-bottom: 20px; /* Adding bottom margin */
+}
+
+/* Styling for explore button */
+.explore-btn {
+  padding: 10px 20px; /* Adding padding */
+  font-size: 1.2rem; /* Setting font size */
+  background-color: #007bff; /* Setting background color */
+  color: white; /* Setting text color */
+  border: none; /* Removing border */
+  border-radius: 20px; /* Adding border radius */
+  cursor: pointer; /* Changing cursor to pointer */
+  transition: background-color 0.3s ease; /* Adding transition effect */
+}
+
+/* Styling for explore button on hover */
+.explore-btn:hover {
+  background-color: #0056b3; /* Changing background color on hover */
+}
+
+/* Styling for quiz container */
+.quiz-container{
+  max-width: 600px; /* Setting maximum width */
+  margin: 0 auto; /* Centering horizontally */
+  padding: 20px; /* Adding padding */
+  text-align: center; /* Aligning text to center */
+}
+
+/* Styling for options within quiz container */
+#options{
+  margin-bottom: 20px; /* Adding bottom margin */
+}
+
+/* Styling for buttons within quiz container */
+.quiz-container button {
+  padding: 10px 20px; /* Adding padding */
+  font-size: 16px; /* Setting font size */
+  cursor: pointer; /* Changing cursor to pointer */
+}
+
+/* Styling for result */
+#result {
+margin-top: 20px; /* Adding top margin */
+font-weight: bold; /* Setting font weight */
+}
+
+.sitemap-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.sitemap {
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sitemap h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.sitemap ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sitemap li {
+  margin-bottom: 10px;
+}
+
+.sitemap a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sitemap a:hover {
+  color: #007bff;
+}
+
+.sitemap ul ul {
+  padding-left: 20px;
+}
+
+.sitemap ul ul ul {
+  padding-left: 40px;
+}

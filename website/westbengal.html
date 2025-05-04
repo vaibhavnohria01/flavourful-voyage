@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>India map</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="font.css">
+        <meta charset="UTF-8">
+    </head>
+    <body class="body-edit">
+      <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo"><a href="index.html">FlavourfulVoyage</a></div>
+          <ul>
+            <li><a href="index.html" aria-label="Homepage">Homepage</a></li>    
+            <li><a href="Me.html" aria-label="About The Author">About The Author</a></li>
+            <li><a href="AboutUs.html" aria-label="About Us">About Us</a></li>
+            <li><a href="feedback.html" aria-label="Feedback">Feedback</a></li>
+            <li><a href="SourceLog.html" aria-label="Sourcelog">Sourcelog</a></li>
+            <li><a href="SiteMap.html" aria-label="Site Map">Site Map</a></li>
+            <li><a href="YoutubeFeed.html" aria-label="YouTube Feed">YouTube Feed</a></li>
+            <li><a href="Quiz.html" aria-label="Game">Game</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="heading-container-image">
+        <img src="images/moon.png" id="icon" alt="Moon picture">
+        <img src="images/top_icon.png" id="scroll-to-top" alt="top icon to scroll">
+        <img src="images/westbengal_text.png" id="heading-image" alt="heading">
+      </div>
+      <br>
+      <br>
+      <div class="video-container">
+        <video controls>
+            <source src="videos/WestBengal.mp4" type="video/mp4">
+        </video>
+    </div>
+    <br>
+    <br>
+    <div class="text-photo-container">
+      <div class="text">
+        <p>Welcome to West Bengal, where a vibrant blend of culture, history, spirituality, and culinary delights awaits your exploration. Dive into the rich cultural tapestry of West Bengal, where art, music, literature, and theater thrive in every corner. Explore the historic city of Kolkata, once the capital of British India, where colonial architecture, bustling markets, and iconic landmarks like the Victoria Memorial and Howrah Bridge offer a glimpse into the city's storied past. Immerse yourself in the spiritual ambiance of West Bengal, where the banks of the Hooghly River are lined with sacred temples and ghats, and pilgrims flock to the Dakshineswar Kali Temple, Kalighat Temple, and Belur Math seeking blessings and solace. Savor the flavors of Bengali cuisine, with its emphasis on fresh seafood, aromatic spices, and sweet treats like rasgulla, sandesh, and mishti doi that tantalize the taste buds and reflect the region's culinary richness. Discover the natural beauty of West Bengal, from the lush tea gardens and misty hills of Darjeeling and Kalimpong to the mangrove forests and wildlife sanctuaries of the Sundarbans. Whether you're exploring the vibrant streets of Kolkata, cruising along the serene backwaters of the Sunderbans, or trekking through the scenic landscapes of the Himalayan foothills, West Bengal promises an unforgettable journey filled with culture, history, spirituality, and gastronomic delights.</p>
+      </div>
+      <div class = "photo-gallery-image">
+        <img src="images/westbengal.png" alt="image">
+      </div>
+    </div>
+    <br>
+    <br> 
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/rasgulla.png" alt="food">
+      </div>
+      <div class="photo-text">
+        <p><b>My favourite food:</b> "Rasgulla"</p>
+      </div>
+    </div>
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/kerala_place.png" alt="place">
+      </div>
+      <div class="photo-text">
+        <p><b>A place must to visit:</b> "Sundarban National Park"</p>
+        <p><b>Best time to visit:</b> throughout the year </p>
+      </div>
+    </div>
+    <br>
+    <p class="fun-fact"><b>Fun Fact:</b> One lesser-known fact about West Bengal is its significant contribution to the global literary landscape through the works of Nobel laureate Rabindranath Tagore, often referred to as the "Bard of Bengal."</p>
+      <br>
+      <div class="btn-container">
+        <button class="explore-btn" onclick="location.href='india.html'">Resurface on the Map</button>
+      </div>
+      <script>
+        var icon2 = document.getElementById("icon2");
+        icon2.onclick = function(){
+          document.body.classList.toggle("dark-theme");
+          document.querySelectorAll('img').forEach(function(img) {img.classList.toggle("grayscale");});
+          if(document.body.classList.contains("dark-theme")){
+            icon2.src = "images/sun.png";
+          }
+          else{
+            icon2.src = "images/moon.png";
+          }
+
+          icon2.classList.add("clicked");
+          setTimeout(function(){icon2.classList.remove("clicked");}, 200);
+        }
+
+        document.getElementById("scroll-to-top").addEventListener("click", function(){
+          window.scrollTo({top:0, behavior:"smooth"});
+        });
+
+      </script>
+      </body>
+      </html>

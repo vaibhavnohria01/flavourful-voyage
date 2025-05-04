@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Game</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="font.css">
+</head>
+<body class="body-edit">
+    <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo"><a href="index.html">FlavourfulVoyage</a></div>
+          <ul>
+            <li><a href="index.html" aria-label="Homepage">Homepage</a></li>    
+            <li><a href="Me.html" aria-label="About The Author">About The Author</a></li>
+            <li><a href="AboutUs.html" aria-label="About Us">About Us</a></li>
+            <li><a href="feedback.html" aria-label="Feedback">Feedback</a></li>
+            <li><a href="SourceLog.html" aria-label="Sourcelog">Sourcelog</a></li>
+            <li><a href="SiteMap.html" aria-label="Site Map">Site Map</a></li>
+            <li><a href="YoutubeFeed.html" aria-label="YouTube Feed">YouTube Feed</a></li>
+            <li><a href="Quiz.html" aria-label="Game">Game</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="heading-container">
+        <img src="images/moon.png" id="icon2" alt="Moon picture">
+        <img src="images/top_icon.png" id="scroll-to-top" alt="top icon to scroll">
+        <h1 class="heading">Quiz Time!!</h1>
+      </div>
+
+      <div class="quiz-container">
+        <button id="startBtn" class="start-button">Start Quiz</button>
+        <div id="countdown"></div>
+        <br>
+        <div id="question"></div>
+        <br>
+        <div id="options"></div>
+        <div id="result"></div>
+    </div>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const questionElement = document.getElementById('question');
+    const optionsElement = document.getElementById('options');
+    const submitButton = document.getElementById('submitBtn');
+    const resultElement = document.getElementById('result');
+    const countdownElement = document.getElementById('countdown');
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+    let timer = 0;
+
+    // Function to shuffle an array
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    // Function to select random questions
+    function selectRandomQuestions(allQuestions, count) {
+        const shuffledQuestions = shuffle(allQuestions); // Shuffle the array of questions
+        return shuffledQuestions.slice(0, count); // Select the first 'count' questions
+    }
+
+    //questionaire
+    const allQuestions = [
+    {
+        question: "What is the name of the ancient stepwell dance performed by the Reang community in Tripura?",
+        options: ["Bhangra", "Hojagiri", "Garba", "Kathak"],
+        answer: "Hojagiri"
+    },
+    {
+        question: "Which Indian state is renowned for its contribution to the Green Revolution and its agricultural productivity?",
+        options: ["Punjab", "Kerala", "Earth", "Saturn"],
+        answer: "Punjab"
+    },
+    {
+        question: "In which state is the Valley of Flowers National Park located?",
+        options: ["Jupiter", "New York", "Sydney", "Uttarakhand"],
+        answer: "Uttarakhand"
+    },
+    {
+        question: "Who is known as the God of Urdu Poetry and hails from Uttar Pradesh?",
+        options: ["Mir Taqi Mir", "Computer", "Kangaroo", "Venus"],
+        answer: "Mir Taqi Mir"
+    },
+    {
+        question: "Which state is home to the largest startup incubator in India, known as T-Hub",
+        options: ["California", "Brisbane", "Telangana", "Canberra"],
+        answer: "Telangana"
+    },
+    {
+        question: "Which state in India achieved the status of being the world's first fully organic state in 2016?",
+        options: ["California", "New Jersey", "Sikkim", "Canberra"],
+        answer: "Sikkim"
+    },
+    {
+        question: "What is the nickname given to Rabindranath Tagore due to his significant literary contributions?",
+        options: ["Sage of Six paths", "Bard of bengal", "Flash", "Dictator"],
+        answer: "Bard of bengal"
+    },
+    {
+        question: "Which prestigious award did Rabindranath Tagore receive, making him the first non-European to achieve this honor?",
+        options: ["turing award", "Nobel Prize in Literature", "university degree", "None of the above"],
+        answer: "Nobel Prize in Literature"
+    },
+    {
+        question: "What is the term used to describe the stepwells found in Rajasthan, which served as critical water sources and architectural marvels?",
+        options: ["Baoris", "Avengers", "unity", "None of the above"],
+        answer: "Baoris"
+    },
+    {
+        question: "In which region of India is the state of Uttarakhand located, known for its remarkable biodiversity and biodiversity hotspots?",
+        options: ["Canada", "America", "Western Himalayas", "Europe"],
+        answer: "Western Himalayas"
+    },
+    {
+        question: "Which Indian state is known for its rich cultural heritage and the preservation of indigenous dance forms such as Bihu and Sattriya?",
+        options: ["Assam", "Toronto", "Bruce", "All of the above"],
+        answer: "Assam"
+    },
+    {
+        question: "Which Indian state is famous for its vibrant celebration of the Hornbill Festival, showcasing the rich cultural heritage of the Naga tribes?",
+        options: ["Nagaland", "London", "Finland", "None of the above"],
+        answer: "Nagaland"
+    },
+    {
+        question: "Who is the legendary Indian sitar virtuoso and composer often referred to as the Godfather of World Music?",
+        options: ["Picasso", "Alan Turing", "Mona Lisa", "None of the above"],
+        answer: "None of the above"
+    },
+    {
+        question: "Which Indian state is famous for its traditional dance form called Garba, performed during the festival of Navratri?",
+        options: ["Florida", "Mexico", "New york", "None of the above"],
+        answer: "None of the above"
+    },
+    {
+        question: "Who is the Indian mathematician and astronomer credited with the discovery of the concept of zero?",
+        options: ["Aryabhata", "Newton", "Galilio", "None of the above"],
+        answer: "Aryabhata"
+    },
+    {
+        question: "Which Indian state is known for its annual Rath Yatra festival, during which massive chariots carry deities through the streets?",
+        options: ["Paris", "Orissa", "Columbia", "None of the above"],
+        answer: "Orissa"
+    },
+    {
+        question: "Which of the following is not a UNESCO World Heritage Site in India known for its natural beauty?",
+        options: ["Big Ben", "Burj Khalifa", "Taj Mahal", "Eiffel Tower"],
+        answer: "Taj Mahal"
+    },
+    {
+        question: "Which Indian state is famous for its picturesque backwaters and houseboat cruises?",
+        options: ["Kerala", "Texas", "Darwin", "Scotland"],
+        answer: "Kerala"
+    },
+    {
+        question: "What is the name of the famous hill station in the Indian state of Himachal Pradesh, renowned for its scenic beauty and adventure sports?",
+        options: ["Paris", "Manali", "Columbia", "None of the above"],
+        answer: "Manali"
+    },
+    {
+        question: "Which desert in India is known for its mesmerizing sand dunes and vibrant culture?",
+        options: ["Thar dessert", "Austin", "Arabia", "None of the above"],
+        answer: "Thar dessert"
+    },
+    {
+        question: "Which famous lake in Kashmir is known for its scenic beauty and floating gardens?",
+        options: ["Thames", "Nile River", "Dal Lake", "None of the above"],
+        answer: "Dal Lake"
+    },
+    {
+        question: "Ladakh is often referred to as Land of _____.",
+        options: ["Thar dessert", "Austin", "Arabia", "High Passes"],
+        answer: "High Passes"
+    },
+    {
+        question: "What is the traditional houseboat called in Kashmir, often found floating on its picturesque lakes?",
+        options: ["Shikara", "Cruise", "Yacht", "Ship"],
+        answer: "Shikara"
+    },
+    {
+        question: "Ladakh is located in the ______ region of India.",
+        options: ["Himalayas", "Brampton", "Ontario", "Rio"],
+        answer: "Himalayas"
+    },
+    {
+        question: "Which iconic monument in India is considered a masterpiece of Muslim architecture and was built by Emperor Shah Jahan?",
+        options: ["Taj Mahal", "Leaning tower of Pisa", "Eiffel Tower", "Big Ben"],
+        answer: "Taj Mahal"
+    },
+    {
+        question: "What is the architectural style of the Buland Darwaza, a grand entrance built by Emperor Akbar to commemorate his victory?",
+        options: ["Arabian", "Persion", "Mughal", "None of these"],
+        answer: "Mughal"
+    },
+    {
+        question: "The Kailasa Temple in Ellora, carved out of a single rock, is dedicated to which Hindu deity?",
+        options: ["Alexander", "Lord Shiva", "Grahambell", "None of these"],
+        answer: "Lord Shiva"
+    },
+    {
+        question: "The tomb of which Mughal emperor is a significant architectural marvel located in Delhi and is often referred to as the Baby Taj Mahal?",
+        options: ["Charles", "Harry", "Kevin", "Humayun"],
+        answer: "Humayun"
+    }
+
+    ];
+
+    const numberOfQuestions = 4; // Number of random questions to select
+    const randomQuestions = selectRandomQuestions(allQuestions, numberOfQuestions); // Select random questions from the available pool
+
+    // Function to start the timer for each question
+    function startTimer() {
+        let timeLeft = 20;
+
+        // Update countdown element every second
+        timer = setInterval(function() {
+            countdownElement.textContent = timeLeft;
+            countdownElement.style.fontSize = "30px";
+            timeLeft--;
+            
+            // End timer when time runs out
+            if (timeLeft < 0) {
+                clearInterval(timer);
+                selectOption("");
+            }
+        }, 1000);
+    }
+
+
+    // Function to display the current question
+    function showQuestion() {
+
+        // Start the timer for the current question
+        startTimer();
+
+        // Get the current question from the randomQuestions array
+        const currentQuestion = randomQuestions[currentQuestionIndex]; // Use randomQuestions array
+        questionElement.textContent = currentQuestion.question;
+        optionsElement.innerHTML = "";// Clear previous options
+        questionElement.style.fontSize = "20px";
+
+        // Display options for the current question
+        currentQuestion.options.forEach(function(option) {
+            const button = document.createElement('button');
+            button.textContent = option;
+            button.classList.add('option-btn');
+            button.addEventListener('click', function() {
+                clearInterval(timer); // Stop the timer when an option is selected
+                selectOption(option);
+            });
+            optionsElement.appendChild(button);
+        });
+    }
+
+    // Function to handle when an option is selected
+    function selectOption(option) {
+
+        // Get the current question from the randomQuestions array
+        const currentQuestion = randomQuestions[currentQuestionIndex]; // Use randomQuestions array
+
+         // Check if the selected option is correct
+        if (option === currentQuestion.answer) {
+            score++;// Increase score for correct answer
+            resultElement.textContent = "Correct!";
+            resultElement.style.color = "green";
+        } else {
+            resultElement.textContent = "Wrong answer."; // Display message for incorrect answer
+            resultElement.style.color = "red";
+        }
+
+        // Disable all option buttons after an option is selected
+        const optionButtons = optionsElement.querySelectorAll('.option-btn');
+        optionButtons.forEach(function(button) {
+            button.disabled = true;
+        });
+
+        // Move to the next question after a brief delay
+        setTimeout(function() {
+            resultElement.textContent = "";
+            resultElement.style.color = "";
+            currentQuestionIndex++;
+
+            // Display next question or show result if all questions have been answered
+            if (currentQuestionIndex < randomQuestions.length) {
+                showQuestion();
+            } else {
+                showResult();
+            }
+        }, 1000);
+    }
+
+    // Function to display the final result
+    function showResult() {
+        resultElement.textContent = "You scored " + score + " out of " + randomQuestions.length + ".";
+    }
+
+    // Event listener for the start button
+    const startButton = document.getElementById('startBtn');
+    startButton.addEventListener('click', function() {
+        showQuestion();// Display the first questio
+        startButton.style.display = 'none';// Hide the start button after clicking 
+    });
+});
+        
+        //CODE FOR DARK MODE
+        // Toggle between light and dark mode
+    var icon2 = document.getElementById("icon2");
+    icon2.onclick = function(){
+        document.body.classList.toggle("dark-theme"); // Toggle dark theme for the body
+        document.querySelectorAll('img').forEach(function(img) {img.classList.toggle("grayscale");}); // Toggle grayscale for images
+        if(document.body.classList.contains("dark-theme")){
+            icon2.src = "images/sun.png"; // Change icon to sun for dark mode
+        }
+        else{
+                icon2.src = "images/moon.png"; // Change icon to moon for light mode
+        }
+
+        icon2.classList.add("clicked"); // Add animation class
+        setTimeout(function(){icon2.classList.remove("clicked");}, 200); // Remove animation class after delay
+        }
+
+        // Scroll to top functionality
+        document.getElementById("scroll-to-top").addEventListener("click", function(){
+        window.scrollTo({top:0, behavior:"smooth"}); // Scroll to top with smooth animation
+        });
+</script>
+</body>
+</html>

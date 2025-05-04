@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Feedback form</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="font.css">
+        <link rel="stylesheet" href="feedback.css">
+        <meta charset="UTF-8">
+    </head>
+    <body class="body-edit-feedback">
+      <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo"><a href="index.html">FlavourfulVoyage</a></div>
+          <ul>
+            <li><a href="index.html" aria-label="Homepage">Homepage</a></li>    
+            <li><a href="Me.html" aria-label="About The Author">About The Author</a></li>
+            <li><a href="AboutUs.html" aria-label="About Us">About Us</a></li>
+            <li><a href="feedback.html" aria-label="Feedback">Feedback</a></li>
+            <li><a href="SourceLog.html" aria-label="Sourcelog">Sourcelog</a></li>
+            <li><a href="SiteMap.html" aria-label="Site Map">Site Map</a></li>
+            <li><a href="YoutubeFeed.html" aria-label="YouTube Feed">YouTube Feed</a></li>
+            <li><a href="Quiz.html" aria-label="Game">Game</a></li>
+          </ul>
+        </div>
+      </nav>
+            <div class="heading-container">
+              <img src="images/moon.png" id="icon2" alt="">
+              <img src="images/top_icon.png" id="scroll-to-top">
+              <h1 class="heading">Feedback!!</h1>
+          </div>
+          <div id="feedback">
+            <h2 style="text-align: center;">Thank you for visiting my website!</h2>
+            <h4 style="text-align: center;">Your feedback would help me grow this website</h4>
+            <p style="text-align: center;">Please complete the form below to let me know what you think about my website.
+              If in case you would like to hear back from us, type in your email, where we can get back to you.
+          </p>
+          <form enctype="text/plain"
+            action="mailto:vaibhavnohria36@gmail.com?subject=Website query" style="text-align: center;">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+              <label for="satisfaction">Overall Satisfaction:</label>
+              <select id="satisfaction" name="satisfaction" required>
+                  <option value="">Select...</option>
+                  <option value="5">Very Satisfied</option>
+                  <option value="4">Satisfied</option>
+                  <option value="3">Neutral</option>
+                  <option value="2">Dissatisfied</option>
+                  <option value="1">Very Dissatisfied</option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label for="recommendation">Likelihood to Recommend (1 to 10):</label>
+              <input type="number" id="recommendation" name="recommendation" min="1" max="10" required>
+          </div>
+          <div class="form-group">
+              <label for="feedbackType">Type of Feedback:</label>
+              <select id="feedbackType" name="feedbackType" required>
+                  <option value="">Select...</option>
+                  <option value="Complaint">Complaint</option>
+                  <option value="Suggestion">Suggestion</option>
+                  <option value="Question">Question</option>
+                  <option value="Compliment">Compliment</option>
+                  <option value="Other">Other</option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label for="feedback">Feedback:</label>
+              <textarea id="feedback" name="feedback" rows="4" required></textarea>
+          </div>
+          <button type="submit">Submit Feedback</button>
+          </form>
+          </div>
+
+          <script>
+            var icon2 = document.getElementById("icon2");
+            icon2.onclick = function(){
+              document.body.classList.toggle("dark-theme");
+              document.querySelectorAll('img').forEach(function(img) {img.classList.toggle("grayscale");});
+              if(document.body.classList.contains("dark-theme")){
+                icon2.src = "images/sun.png";
+              }
+              else{
+                icon2.src = "images/moon.png";
+              }
+      
+              icon2.classList.add("clicked");
+              setTimeout(function(){icon2.classList.remove("clicked");}, 200);
+            }
+      
+            document.getElementById("scroll-to-top").addEventListener("click", function(){
+              window.scrollTo({top:0, behavior:"smooth"});
+            });
+          </script>
+        </body>
+</html>

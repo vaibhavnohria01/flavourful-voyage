@@ -1,0 +1,60 @@
+/* Defining custom font faces */
+@font-face {
+    font-family: myFont;
+    src: url(dancing.ttf);
+}
+
+@font-face {
+    font-family: myFont2;
+    src: url(font/Dancing_Script/static/SedanSC-Regular.ttf);
+}
+
+@font-face {
+    font-family: myFont3;
+    src: url(font/Dancing_Script/static/AveriaSerifLibre-Light.ttf);
+}
+
+/* Applying custom fonts to elements */
+p {
+    font-family: myFont;
+}
+
+.fun-fact {
+    font-family: myFont2;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 22px;
+    text-align: center;
+}
+
+h1.heading {
+    font-family: myFont;
+    font-size: 90px;
+    color: rgb(16, 15, 15);
+    font-weight: inherit;
+    background-color: transparent;
+    text-align: center;
+}
+
+.text p {
+    font-family: myFont3;
+    font-size: 20px;
+    text-align: center;
+}
+
+.map-heading h3 {
+    font-family: myFont3;
+    font-size: 20px;
+    text-align: center;
+    color: aliceblue;
+    margin-top: 20px;
+}
+
+.content-reflection p{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 22px;
+    margin-left: 60px;
+    margin-right: 60px;
+    font-family: myFont2;
+}

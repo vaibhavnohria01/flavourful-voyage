@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>India map</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="font.css">
+        <meta charset="UTF-8">
+    </head>
+    <body class="body-edit">
+      <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo"><a href="index.html">FlavourfulVoyage</a></div>
+          <ul>
+            <li><a href="index.html" aria-label="Homepage">Homepage</a></li>    
+            <li><a href="Me.html" aria-label="About The Author">About The Author</a></li>
+            <li><a href="AboutUs.html" aria-label="About Us">About Us</a></li>
+            <li><a href="feedback.html" aria-label="Feedback">Feedback</a></li>
+            <li><a href="SourceLog.html" aria-label="Sourcelog">Sourcelog</a></li>
+            <li><a href="SiteMap.html" aria-label="Site Map">Site Map</a></li>
+            <li><a href="YoutubeFeed.html" aria-label="YouTube Feed">YouTube Feed</a></li>
+            <li><a href="Quiz.html" aria-label="Game">Game</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="heading-container-image">
+        <img src="images/moon.png" id="icon2" alt="Moon picture">
+        <img src="images/top_icon.png" id="scroll-to-top" alt="top icon to scroll">
+        <img src="images/madhya_text.png" id="heading-image" alt="heading">
+      </div>
+      <br>
+      <br>
+      <div class="video-container">
+        <video controls>
+            <source src="videos/Madhya_Pradesh.mp4" type="video/mp4">
+        </video>
+    </div>
+    <br>
+    <br>
+    <div class="text-photo-container">
+      <div class="text">
+        <p>Welcome to Madhya Pradesh, where a tapestry of history, culture, wildlife, and spirituality unfolds across its diverse landscapes. Explore the ancient heritage of Madhya Pradesh, with its magnificent forts, intricately carved temples, and UNESCO World Heritage sites like Khajuraho and Sanchi that speak volumes of its rich past. Immerse yourself in the vibrant culture of the state, where traditional music and dance forms like Gond art and Kalbelia add color and rhythm to everyday life. Savor the flavors of Madhya Pradesh's cuisine, with its mouthwatering specialties like poha, bhutte ka kees, and dal bafla, each a culinary delight that reflects the region's culinary diversity. Discover the natural beauty of Madhya Pradesh, from the lush forests and cascading waterfalls of the Vindhya and Satpura ranges to the expansive grasslands of Kanha and Bandhavgarh National Parks, home to majestic tigers and other wildlife. Whether you're exploring the historic city of Gwalior, embarking on a river cruise along the Narmada, or meditating at the ancient caves of Ujjain, Madhya Pradesh promises an enriching journey filled with history, culture, and natural wonders.</p>
+      </div>
+      <div class = "photo-gallery-image">
+        <img src="images/madhya.png" alt="image">
+      </div>
+    </div>
+    <br>
+    <br> 
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/madhya_food.png" alt="food">
+      </div>
+      <div class="photo-text">
+        <p><b>My favourite food:</b> "Poha"</p>
+      </div>
+    </div>
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/kanha-tiger-reserve-madhya.png" alt="place">
+      </div>
+      <div class="photo-text">
+        <p><b>A place must to visit:</b> "Kanha National Park"</p>
+        <p><b>Best time to visit:</b> between october and march </p>
+      </div>
+    </div>
+    <br>
+    <p class="fun-fact"><b>Fun Fact:</b> One lesser-known fact about Madhya Pradesh is its rich biodiversity, which includes the highest number of tigers in India and one of the largest populations of leopards in the world.</p>
+      <br>
+      <div class="btn-container">
+        <button class="explore-btn" onclick="location.href='india.html'">Resurface on the Map</button>
+      </div>
+      <script>
+        var icon2 = document.getElementById("icon2");
+        icon2.onclick = function(){
+          document.body.classList.toggle("dark-theme");
+          document.querySelectorAll('img').forEach(function(img) {img.classList.toggle("grayscale");});
+          if(document.body.classList.contains("dark-theme")){
+            icon2.src = "images/sun.png";
+          }
+          else{
+            icon2.src = "images/moon.png";
+          }
+
+          icon2.classList.add("clicked");
+          setTimeout(function(){icon2.classList.remove("clicked");}, 200);
+        }
+
+        document.getElementById("scroll-to-top").addEventListener("click", function(){
+          window.scrollTo({top:0, behavior:"smooth"});
+        });
+
+      </script>
+      </body>
+      </html>

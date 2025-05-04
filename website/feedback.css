@@ -1,0 +1,122 @@
+/*enhancing the form look and placement in the webpage*/
+.body-edit-feedback {
+    background-color: rgba(251, 226, 133, 0.29); /* Setting background color */
+    margin: 0; /* Removing default margin */
+    padding: 0; /* Removing default padding */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Styling for body in dark theme */
+  body.dark-theme{
+    background-color: #7F7F7FC5; /* Setting background color */
+  }
+  
+  /* Styling for navbar in dark theme */
+  body.dark-theme .navbar {
+    background-color: #27364E; /* Darker background color for night mode */
+    color: rgb(220, 220, 220); /* Lighter text color for night mode */
+  }
+
+.feedback{
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#icon2{
+    cursor: pointer; /* Changing cursor to pointer */
+    position: fixed; /* Positioning fixed */
+    left: 1%; /* Aligning to left */
+    transform: translateY(5px); /* Translating vertically */
+    width: 50px; /* Setting width */
+    height: auto; /* Setting height to auto */
+    transition: transform 0.2s ease, opacity 0.2s ease; /* Adding transition */
+    border-radius: 50%; /* Adding border radius */
+    z-index: 999; /* Setting z-index */
+  }
+  
+  /* Styling for clicked icon 2 */
+  #icon2.clicked {
+    transform: scale(0.1) rotate(180deg); /* Transforming on click */
+    opacity: 0; /* Setting opacity to 0 */
+    filter: invert(100%);  /* Inverting color */
+  }
+
+  /* Styling for scroll-to-top button */
+#scroll-to-top {
+    width: 50px; /* Setting width */
+    height: auto; /* Setting height to auto */
+    cursor: pointer; /* Changing cursor to pointer */
+    position: fixed; /* Positioning fixed */
+    right: 10px; /* Aligning to right */
+    transition: opacity 0.2s ease; /* Adding transition effect */
+    opacity: 0.6; /* Setting opacity */
+    z-index: 999; /* Setting z-index */
+    }
+    
+    /* Styling for scroll-to-top button on hover */
+    #scroll-to-top:hover {
+    filter: brightness(0.7); /* Adjusting brightness on hover */
+    opacity: 1; /* Setting opacity on hover */
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 0; /* Ensures no margin at the top */
+    }
+    
+    /* Form Styles */
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block; /* Each label starts on a new line */
+        margin-bottom: 5px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select,
+    input[type="number"] {
+        width: 100%; /* Take up full width of their container */
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box; /* Padding and border included in the width */
+    }
+    
+    button {
+        display: block;
+        width: 100%; /* Full width button */
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    
+    /* Responsive Styles */
+    @media screen and (max-width: 768px) {
+        .container {
+            margin: 20px auto; /* Less margin on smaller screens */
+            padding: 10px; /* Less padding on smaller screens */
+        }
+    }
+    
+    @media screen and (max-width: 480px) {
+        .container {
+            max-width: 90%; /* Slightly narrower container on very small screens */
+        }
+    }

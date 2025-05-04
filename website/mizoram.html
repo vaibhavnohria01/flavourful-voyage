@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>India map</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="font.css">
+        <meta charset="UTF-8">
+    </head>
+    <body class="body-edit">
+      <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo"><a href="index.html">FlavourfulVoyage</a></div>
+          <ul>
+            <li><a href="index.html" aria-label="Homepage">Homepage</a></li>    
+            <li><a href="Me.html" aria-label="About The Author">About The Author</a></li>
+            <li><a href="AboutUs.html" aria-label="About Us">About Us</a></li>
+            <li><a href="feedback.html" aria-label="Feedback">Feedback</a></li>
+            <li><a href="SourceLog.html" aria-label="Sourcelog">Sourcelog</a></li>
+            <li><a href="SiteMap.html" aria-label="Site Map">Site Map</a></li>
+            <li><a href="YoutubeFeed.html" aria-label="YouTube Feed">YouTube Feed</a></li>
+            <li><a href="Quiz.html" aria-label="Game">Game</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="heading-container-image">
+        <img src="images/moon.png" id="icon2" alt="Moon picture">
+        <img src="images/top_icon.png" id="scroll-to-top" alt="top icon to scroll">
+        <img src="images/mizoram_text.png" id="heading-image" alt="heading">
+      </div>
+      <br>
+      <br>
+      <div class="video-container">
+        <video controls>
+            <source src="videos/MIZORAM.mp4" type="video/mp4">
+        </video>
+    </div>
+    <br>
+    <br>
+    <div class="text-photo-container">
+      <div class="text">
+        <p>Welcome to Mizoram, where the lush hills, vibrant culture, serene lakes, and warm smiles of the people create an unforgettable experience. Explore the natural beauty of Mizoram, with its verdant landscapes, cascading waterfalls, and misty valleys that beckon adventurers and nature lovers alike. Immerse yourself in the rich culture of Mizoram, where traditional dance forms like Cheraw and Khuallam express the spirit and identity of the Mizo people. Savor the flavors of Mizoram's cuisine, with its emphasis on locally sourced ingredients and aromatic spices creating dishes like Bai, Vawksa Rep, and Sawhchiar that delight the senses and reflect the region's culinary heritage. Discover the spiritual essence of Mizoram, with its ancient monoliths, bamboo churches, and tranquil lakes like Tamdil and Palak that offer moments of peace and reflection amidst the natural beauty. Whether you're trekking through the dense forests, exploring the bustling markets of Aizawl, or simply enjoying the hospitality of the locals, Mizoram promises an unforgettable journey filled with beauty, culture, and warmth.</p>
+      </div>
+      <div class = "photo-gallery-image">
+        <img src="images/mizoram.png" alt="images">
+      </div>
+    </div>
+    <br>
+    <br> 
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/bamboo_shoot_fry.png" alt="food">
+      </div>
+      <div class="photo-text">
+        <p><b>My favourite food:</b> "bamboo shoots fry"</p>
+      </div>
+    </div>
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/mizoram_place.png" alt="place">
+      </div>
+      <div class="photo-text">
+        <p><b>A place must to visit:</b> "Vantawng Waterfalls"</p>
+        <p><b>Best time to visit:</b> September to January </p>
+      </div>
+    </div>
+    <br>
+    <p class="fun-fact"><b>Fun Fact:</b> Inkhawm is an integral part of Mizoram's cultural fabric, serving as a cornerstone of community life and identity. It reflects the strong sense of unity, cooperation, and solidarity that characterizes Mizo society, making it a unique and cherished tradition with deep-rooted significance.</p>
+      <br>
+      <div class="btn-container">
+        <button class="explore-btn" onclick="location.href='india.html'">Resurface on the Map</button>
+      </div>
+      <script>
+        var icon2 = document.getElementById("icon2");
+        icon2.onclick = function(){
+          document.body.classList.toggle("dark-theme");
+          document.querySelectorAll('img').forEach(function(img) {img.classList.toggle("grayscale");});
+          if(document.body.classList.contains("dark-theme")){
+            icon2.src = "images/sun.png";
+          }
+          else{
+            icon2.src = "images/moon.png";
+          }
+
+          icon2.classList.add("clicked");
+          setTimeout(function(){icon2.classList.remove("clicked");}, 200);
+        }
+
+        document.getElementById("scroll-to-top").addEventListener("click", function(){
+          window.scrollTo({top:0, behavior:"smooth"});
+        });
+
+      </script>
+      </body>
+      </html>

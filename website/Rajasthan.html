@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>India map</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="font.css">
+        <meta charset="UTF-8">
+    </head>
+    <body class="body-edit">
+      <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo"><a href="index.html">FlavourfulVoyage</a></div>
+          <ul>
+            <li><a href="index.html" aria-label="Homepage">Homepage</a></li>    
+            <li><a href="Me.html" aria-label="About The Author">About The Author</a></li>
+            <li><a href="AboutUs.html" aria-label="About Us">About Us</a></li>
+            <li><a href="feedback.html" aria-label="Feedback">Feedback</a></li>
+            <li><a href="SourceLog.html" aria-label="Sourcelog">Sourcelog</a></li>
+            <li><a href="SiteMap.html" aria-label="Site Map">Site Map</a></li>
+            <li><a href="YoutubeFeed.html" aria-label="YouTube Feed">YouTube Feed</a></li>
+            <li><a href="Quiz.html" aria-label="Game">Game</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="heading-container-image">
+        <img src="images/moon.png" id="icon2" alt="Moon picture">
+        <img src="images/top_icon.png" id="scroll-to-top" alt="top icon to scroll">
+        <img src="images/rajasthan_text.png" id="heading-image" alt="heading">
+      </div>
+      <br>
+      <br>
+      <div class="video-container">
+        <video controls>
+            <source src="videos/rajasthan.mp4" type="video/mp4">
+        </video>
+    </div>
+    <br>
+    <br>
+    <div class="text-photo-container">
+      <div class="text">
+        <p>Welcome to Rajasthan, where the golden sands of the Thar Desert, the majestic forts and palaces, the vibrant colors of traditional attire, and the rich cultural heritage combine to create an enchanting experience. Explore the opulent history of Rajasthan, with its magnificent forts like the Amber Fort in Jaipur, the Mehrangarh Fort in Jodhpur, and the iconic Udaipur City Palace, each a testament to the grandeur of the Rajput era. Immerse yourself in the vibrant culture of Rajasthan, where traditional dance forms like Ghoomar and Kalbelia, folk music, and colorful festivals like the Pushkar Camel Fair and Teej celebrations bring the desert landscape to life. Savor the flavors of Rajasthani cuisine, with its spicy curries, crispy snacks, and delectable sweets like dal baati churma and ghevar that tantalize the taste buds and reflect the region's culinary richness. Discover the natural beauty of Rajasthan, from the picturesque lakes of Udaipur and the sand dunes of Jaisalmer to the lush forests of Ranthambore National Park, home to majestic tigers and other wildlife. Whether you're exploring the bustling markets of Jaipur, riding a camel through the desert, or simply marveling at the architectural wonders of the state, Rajasthan promises an unforgettable journey filled with history, culture, and adventure.</p>
+      </div>
+      <div class = "photo-gallery-image">
+        <img src="images/rajasthan.png" alt="image">
+      </div>
+    </div>
+    <br>
+    <br> 
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/Rajasthani_thali.png" alt="food">
+      </div>
+      <div class="photo-text">
+        <p><b>My favourite food:</b> "Rajasthani Platter"</p>
+      </div>
+    </div>
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/bhangarh_fort.png" alt="place">
+      </div>
+      <div class="photo-text">
+        <p><b>A place must to visit:</b> "Bhangarh Fort"</p>
+        <p><b>Best time to visit:</b> throughout the year </p>
+      </div>
+    </div>
+    <br>
+    <p class="fun-fact"><b>Fun Fact:</b> Rajasthan's tradition of water harvesting and conservation, exemplified by its magnificent stepwells, highlights the state's cultural heritage, architectural prowess, and resilience in the face of environmental challenges. These historic structures serve as reminders of Rajasthan's enduring relationship with water and its innovative approaches to sustainable living in arid regions.</p>
+      <br>
+      <div class="btn-container">
+        <button class="explore-btn" onclick="location.href='india.html'">Resurface on the Map</button>
+      </div>
+      <script>
+        var icon2 = document.getElementById("icon2");
+        icon2.onclick = function(){
+          document.body.classList.toggle("dark-theme");
+          document.querySelectorAll('img').forEach(function(img) {img.classList.toggle("grayscale");});
+          if(document.body.classList.contains("dark-theme")){
+            icon2.src = "images/sun.png";
+          }
+          else{
+            icon2.src = "images/moon.png";
+          }
+
+          icon2.classList.add("clicked");
+          setTimeout(function(){icon2.classList.remove("clicked");}, 200);
+        }
+
+        document.getElementById("scroll-to-top").addEventListener("click", function(){
+          window.scrollTo({top:0, behavior:"smooth"});
+        });
+
+      </script>
+      </body>
+      </html>

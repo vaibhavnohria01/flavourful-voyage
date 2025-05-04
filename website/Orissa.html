@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>India map</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="font.css">
+        <meta charset="UTF-8">
+    </head>
+    <body class="body-edit">
+      <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo"><a href="index.html">FlavourfulVoyage</a></div>
+          <ul>
+            <li><a href="index.html" aria-label="Homepage">Homepage</a></li>    
+            <li><a href="Me.html" aria-label="About The Author">About The Author</a></li>
+            <li><a href="AboutUs.html" aria-label="About Us">About Us</a></li>
+            <li><a href="feedback.html" aria-label="Feedback">Feedback</a></li>
+            <li><a href="SourceLog.html" aria-label="Sourcelog">Sourcelog</a></li>
+            <li><a href="SiteMap.html" aria-label="Site Map">Site Map</a></li>
+            <li><a href="YoutubeFeed.html" aria-label="YouTube Feed">YouTube Feed</a></li>
+            <li><a href="Quiz.html" aria-label="Game">Game</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="heading-container-image">
+        <img src="images/moon.png" id="icon2" alt="Moon picture">
+        <img src="images/top_icon.png" id="scroll-to-top" alt="top icon to scroll">
+        <img src="images/orrisa_text.png" id="heading-image" alt="heading">
+      </div>
+      <br>
+      <br>
+      <div class="video-container">
+        <video controls>
+            <source src="videos/Odisha.mp4" type="video/mp4">
+        </video>
+    </div>
+    <br>
+    <br>
+    <div class="text-photo-container">
+      <div class="text">
+        <p>Welcome to Odisha, where ancient temples, pristine beaches, vibrant culture, and rich heritage await your discovery. Explore the architectural marvels of Odisha, from the iconic Sun Temple in Konark to the majestic Jagannath Temple in Puri, each a testament to the region's rich cultural and religious history. Immerse yourself in the vibrant culture of Odisha, where traditional dance forms like Odissi and Gotipua captivate audiences with their grace and elegance. Savor the flavors of Odisha's cuisine, with its emphasis on fresh seafood, aromatic spices, and indigenous ingredients creating dishes like the famous Pahala rasagulla, chenna poda, and dalma that tantalize the taste buds and reflect the region's culinary diversity. Discover the natural beauty of Odisha, from the lush forests and wildlife sanctuaries of Simlipal and Bhitarkanika to the serene beaches and tranquil lakes of Chilika and Hirakud. Whether you're exploring the historic sites of Bhubaneswar, cruising along the backwaters of the Mahanadi River, or simply soaking in the sun on the beaches of Puri, Odisha promises an unforgettable journey filled with beauty, culture, and adventure.</p>
+      </div>
+      <div class = "photo-gallery-image">
+        <img src="images/orrisa.png" alt="image">
+      </div>
+    </div>
+    <br>
+    <br> 
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/dahi.png" alt="food">
+      </div>
+      <div class="photo-text">
+        <p><b>My favourite food:</b> "Eggplant curry"</p>
+      </div>
+    </div>
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/konark.png" alt="place">
+      </div>
+      <div class="photo-text">
+        <p><b>A place must to visit:</b> "Konark Sun temple"</p>
+        <p><b>Best time to visit:</b> throughout the year </p>
+      </div>
+    </div>
+    <br>
+    <p class="fun-fact"><b>Fun Fact:</b> Odisha's pioneering role in disaster management underscores its commitment to protecting the lives and livelihoods of its people in the face of natural calamities. By implementing innovative strategies and fostering community resilience, Odisha continues to set an example for effective disaster risk reduction and management on the global stage.</p>
+      <br>
+      <div class="btn-container">
+        <button class="explore-btn" onclick="location.href='india.html'">Resurface on the Map</button>
+      </div>
+      <script>
+        var icon2 = document.getElementById("icon2");
+        icon2.onclick = function(){
+          document.body.classList.toggle("dark-theme");
+          document.querySelectorAll('img').forEach(function(img) {img.classList.toggle("grayscale");});
+          if(document.body.classList.contains("dark-theme")){
+            icon2.src = "images/sun.png";
+          }
+          else{
+            icon2.src = "images/moon.png";
+          }
+
+          icon2.classList.add("clicked");
+          setTimeout(function(){icon2.classList.remove("clicked");}, 200);
+        }
+
+        document.getElementById("scroll-to-top").addEventListener("click", function(){
+          window.scrollTo({top:0, behavior:"smooth"});
+        });
+
+      </script>
+      </body>
+      </html>

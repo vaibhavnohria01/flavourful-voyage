@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>India map</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="font.css">
+        <meta charset="UTF-8">
+    </head>
+    <body class="body-edit">
+      <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo"><a href="index.html">FlavourfulVoyage</a></div>
+          <ul>
+            <li><a href="index.html" aria-label="Homepage">Homepage</a></li>    
+            <li><a href="Me.html" aria-label="About The Author">About The Author</a></li>
+            <li><a href="AboutUs.html" aria-label="About Us">About Us</a></li>
+            <li><a href="feedback.html" aria-label="Feedback">Feedback</a></li>
+            <li><a href="SourceLog.html" aria-label="Sourcelog">Sourcelog</a></li>
+            <li><a href="SiteMap.html" aria-label="Site Map">Site Map</a></li>
+            <li><a href="YoutubeFeed.html" aria-label="YouTube Feed">YouTube Feed</a></li>
+            <li><a href="Quiz.html" aria-label="Game">Game</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="heading-container-image">
+        <img src="images/moon.png" id="icon2" alt="Moon picture">
+        <img src="images/top_icon.png" id="scroll-to-top" alt="top icon to scroll">
+        <img src="images/tripura_text.png" id="heading-image" alt="heading">
+      </div>
+      <br>
+      <br>
+      <div class="video-container">
+        <video controls>
+            <source src="videos/Tripura.mp4" type="video/mp4">
+        </video>
+    </div>
+    <br>
+    <br>
+    <div class="text-photo-container">
+      <div class="text">
+        <p>Welcome to Tripura, where ancient history, diverse culture, lush landscapes, and warm hospitality await your exploration. Explore the rich heritage of Tripura, with its magnificent archaeological sites like the Neermahal Palace, Ujjayanta Palace, and the ancient rock carvings of Unakoti that offer glimpses into the region's storied past. Immerse yourself in the vibrant culture of Tripura, where traditional dance forms like Garia and Hojagiri captivate audiences with their grace and energy, and festivals like Kharchi Puja and Tripura Sundari Temple festivals bring communities together in celebration. Savor the flavors of Tripura's cuisine, with its emphasis on rice, fish, and bamboo shoots creating dishes like Mui Borok, Chakhwi, and Wahan Mosdeng that tantalize the taste buds and reflect the region's culinary diversity. Discover the natural beauty of Tripura, from the rolling hills and tea gardens of Dharmanagar to the serene lakes and wildlife sanctuaries of Sepahijala and Rowa. Whether you're exploring the historic sites of Agartala, trekking through the lush forests of Jampui Hills, or simply enjoying a boat ride on the Rudrasagar Lake, Tripura promises an unforgettable journey filled with culture, history, and natural wonders.</p>
+      </div>
+      <div class = "photo-gallery-image">
+        <img src="images/tripura.png" alt="image">
+      </div>
+    </div>
+    <br>
+    <br> 
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/mui.png" alt="food">
+      </div>
+      <div class="photo-text">
+        <p><b>My favourite food:</b> "Mui Borok"</p>
+      </div>
+    </div>
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/Unakoti.png" alt="place">
+      </div>
+      <div class="photo-text">
+        <p><b>A place must to visit:</b> "Unakoti Rock Carvings"</p>
+        <p><b>Best time to visit:</b> throughout the year </p>
+      </div>
+    </div>
+    <br>
+    <p class="fun-fact"><b>Fun Fact:</b> Tripura's indigenous dance forms, such as the Hojagiri dance, are not only a source of pride for the state's communities but also a valuable cultural asset that contributes to its identity and heritage. Through their performances, these dance forms continue to captivate audiences and promote appreciation for Tripura's rich cultural traditions.</p>
+      <br>
+      <div class="btn-container">
+        <button class="explore-btn" onclick="location.href='india.html'">Resurface on the Map</button>
+      </div>
+      <script>
+        var icon2 = document.getElementById("icon2");
+        icon2.onclick = function(){
+          document.body.classList.toggle("dark-theme");
+          document.querySelectorAll('img').forEach(function(img) {img.classList.toggle("grayscale");});
+          if(document.body.classList.contains("dark-theme")){
+            icon2.src = "images/sun.png";
+          }
+          else{
+            icon2.src = "images/moon.png";
+          }
+
+          icon2.classList.add("clicked");
+          setTimeout(function(){icon2.classList.remove("clicked");}, 200);
+        }
+
+        document.getElementById("scroll-to-top").addEventListener("click", function(){
+          window.scrollTo({top:0, behavior:"smooth"});
+        });
+
+      </script>
+      </body>
+      </html>

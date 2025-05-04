@@ -1,0 +1,25 @@
+/* Resetting styles */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* default list styles */
+ul {
+    list-style: none;
+}
+
+/* Making all links appear as default */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Making images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>India map</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="font.css">
+        <meta charset="UTF-8">
+    </head>
+    <body class="body-edit">
+      <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo"><a href="index.html">FlavourfulVoyage</a></div>
+          <ul>
+            <li><a href="index.html" aria-label="Homepage">Homepage</a></li>    
+            <li><a href="Me.html" aria-label="About The Author">About The Author</a></li>
+            <li><a href="AboutUs.html" aria-label="About Us">About Us</a></li>
+            <li><a href="feedback.html" aria-label="Feedback">Feedback</a></li>
+            <li><a href="SourceLog.html" aria-label="Sourcelog">Sourcelog</a></li>
+            <li><a href="SiteMap.html" aria-label="Site Map">Site Map</a></li>
+            <li><a href="YoutubeFeed.html" aria-label="YouTube Feed">YouTube Feed</a></li>
+            <li><a href="Quiz.html" aria-label="Game">Game</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="heading-container-image">
+        <img src="images/moon.png" id="icon2" alt="Moon picture">
+        <img src="images/top_icon.png" id="scroll-to-top" alt="top icon to scroll">
+        <img src="images/nagaland_text.png" id="heading-image" alt="heading">
+      </div>
+      <br>
+      <br>
+      <div class="video-container">
+        <video controls>
+            <source src="videos/nagaland.mp4" type="video/mp4">
+        </video>
+    </div>
+    <br>
+    <br>
+    <div class="text-photo-container">
+      <div class="text">
+        <p>Welcome to Nagaland, where the mist-covered hills, vibrant festivals, rich culture, and warm hospitality create a truly unique experience. Explore the natural beauty of Nagaland, with its dense forests, cascading waterfalls, and rolling hills that offer breathtaking vistas at every turn. Immerse yourself in the rich cultural tapestry of Nagaland, where traditional dance forms like the energetic Hornbill Festival and Sekrenyi celebrations showcase the region's vibrant heritage and spirit of unity. Savor the flavors of Naga cuisine, with its emphasis on locally sourced ingredients and fiery spices creating dishes like smoked pork with bamboo shoots, axone, and akhuni that tantalize the taste buds and reflect the region's culinary diversity. Discover the spiritual essence of Nagaland, with its ancient villages, sacred groves, and traditional stone monoliths that offer glimpses into the region's rich history and traditions. Whether you're trekking through the rugged terrain, exploring the bustling markets of Kohima, or simply enjoying the warmth of a Naga welcome, Nagaland promises an unforgettable journey filled with beauty, culture, and adventure.</p>
+      </div>
+      <div class = "photo-gallery-image">
+        <img src="images/nagaland.png" alt="image">
+      </div>
+    </div>
+    <br>
+    <br> 
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/fermented_soybean.png" alt="food">
+      </div>
+      <div class="photo-text">
+        <p><b>My favourite food:</b> "fermented soybean"</p>
+      </div>
+    </div>
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/kohima.png" alt="place">
+      </div>
+      <div class="photo-text">
+        <p><b>A place must to visit:</b> "Kohima"</p>
+        <p><b>Best time to visit:</b> throughout the year </p>
+      </div>
+    </div>
+    <br>
+    <p class="fun-fact"><b>Fun Fact:</b> Nagaland's status as a global hotspot for butterfly diversity highlights the state's ecological richness and biodiversity. By conserving its diverse butterfly populations, Nagaland not only preserves its natural heritage but also contributes to global efforts to protect biodiversity and promote sustainable development.</p>
+      <br>
+      <div class="btn-container">
+        <button class="explore-btn" onclick="location.href='india.html'">Resurface on the Map</button>
+      </div>
+      <script>
+        var icon2 = document.getElementById("icon2");
+        icon2.onclick = function(){
+          document.body.classList.toggle("dark-theme");
+          document.querySelectorAll('img').forEach(function(img) {img.classList.toggle("grayscale");});
+          if(document.body.classList.contains("dark-theme")){
+            icon2.src = "images/sun.png";
+          }
+          else{
+            icon2.src = "images/moon.png";
+          }
+
+          icon2.classList.add("clicked");
+          setTimeout(function(){icon2.classList.remove("clicked");}, 200);
+        }
+
+        document.getElementById("scroll-to-top").addEventListener("click", function(){
+          window.scrollTo({top:0, behavior:"smooth"});
+        });
+
+      </script>
+      </body>
+      </html> 

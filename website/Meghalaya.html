@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>India map</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="font.css">
+        <meta charset="UTF-8">
+    </head>
+    <body class="body-edit">
+      <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo"><a href="index.html">FlavourfulVoyage</a></div>
+          <ul>
+            <li><a href="index.html" aria-label="Homepage">Homepage</a></li>    
+            <li><a href="Me.html" aria-label="About The Author">About The Author</a></li>
+            <li><a href="AboutUs.html" aria-label="About Us">About Us</a></li>
+            <li><a href="feedback.html" aria-label="Feedback">Feedback</a></li>
+            <li><a href="SourceLog.html" aria-label="Sourcelog">Sourcelog</a></li>
+            <li><a href="SiteMap.html" aria-label="Site Map">Site Map</a></li>
+            <li><a href="YoutubeFeed.html" aria-label="YouTube Feed">YouTube Feed</a></li>
+            <li><a href="Quiz.html" aria-label="Game">Game</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="heading-container-image">
+        <img src="images/moon.png" id="icon2" alt="Moon picture">
+        <img src="images/top_icon.png" id="scroll-to-top" alt="top icon to scroll">
+        <img src="images/Meghalaya_text.png" id="heading-image" alt="heading">
+      </div>
+      <br>
+      <br>
+      <div class="video-container">
+        <video controls>
+            <source src="videos/meghalaya.mp4" type="video/mp4">
+        </video>
+    </div>
+    <br>
+    <br>
+    <div class="text-photo-container">
+      <div class="text">
+        <p>Welcome to Meghalaya, where the misty hills, cascading waterfalls, rich culture, and warm hospitality create an enchanting experience like no other. Explore the breathtaking beauty of Meghalaya's landscapes, from the lush greenery of Cherrapunji, one of the wettest places on earth, to the serene lakes and limestone caves of Mawsynram. Immerse yourself in the vibrant culture of Meghalaya, where traditional dance forms like the Nongkrem and Wangala festivals celebrate the region's agricultural heritage and spiritual beliefs. Savor the flavors of Meghalaya's cuisine, with its emphasis on fresh ingredients and bold spices creating dishes like Jadoh, Dohneiiong, and Nakham Bitchi that tantalize the taste buds and warm the soul. Discover the natural wonders of Meghalaya, from the living root bridges of Cherrapunji to the sacred forests of Mawphlang, where ancient traditions and ecological conservation coexist in harmony. Whether you're trekking through the mist-covered hills, exploring the vibrant markets of Shillong, or simply enjoying a cup of steaming tea overlooking the scenic vistas, Meghalaya promises an unforgettable journey filled with beauty, culture, and adventure.</p>
+      </div>
+      <div class = "photo-gallery-image">
+        <img src="images/Meghalaya.png" alt="image">
+      </div>
+    </div>
+    <br>
+    <br> 
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/pumaloi.png" alt="food">
+      </div>
+      <div class="photo-text">
+        <p><b>My favourite food:</b> "Pumaloi"</p>
+      </div>
+    </div>
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/mawsmai.png" alt="place">
+      </div>
+      <div class="photo-text">
+        <p><b>A place must to visit:</b> "Mawsmai Cave"</p>
+        <p><b>Best time to visit:</b> June through September </p>
+      </div>
+    </div>
+    <br>
+    <p class="fun-fact"><b>Fun Fact:</b> Meghalaya's distinction as the wettest place on Earth, along with its stunning landscapes, rich culture, and adventure opportunities, makes it a truly remarkable destination that continues to captivate visitors and explorers from all corners of the globe.</p>
+      <br>
+      <div class="btn-container">
+        <button class="explore-btn" onclick="location.href='india.html'">Resurface on the Map</button>
+      </div>
+      <script>
+        var icon2 = document.getElementById("icon2");
+        icon2.onclick = function(){
+          document.body.classList.toggle("dark-theme");
+          document.querySelectorAll('img').forEach(function(img) {img.classList.toggle("grayscale");});
+          if(document.body.classList.contains("dark-theme")){
+            icon2.src = "images/sun.png";
+          }
+          else{
+            icon2.src = "images/moon.png";
+          }
+
+          icon2.classList.add("clicked");
+          setTimeout(function(){icon2.classList.remove("clicked");}, 200);
+        }
+
+        document.getElementById("scroll-to-top").addEventListener("click", function(){
+          window.scrollTo({top:0, behavior:"smooth"});
+        });
+
+      </script>
+      </body>
+      </html>

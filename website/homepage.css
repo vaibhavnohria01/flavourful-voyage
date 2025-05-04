@@ -1,0 +1,74 @@
+/* Resetting margin, padding, and setting height for body and HTML */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Styling the background animation container */
+#vantajs-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensures it's behind other content */
+}
+
+/* Styling for the heading */
+h1{
+  width: 100%;
+  height: 100%;
+  font-size: 180px;
+  color: rgb(255, 149, 0);
+  text-shadow:-2px -2px 0 #000,
+  2px -2px 0 #000,
+  -2px 2px 0 #000,
+  2px 2px 0 #000;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 8px;
+}
+
+/* Styling for paragraphs */
+p{
+  font-size: 50px;
+  color: rgb(16, 15, 15);
+  font-weight: inherit; 
+  background-color: transparent;
+  text-align: center;
+}
+
+/* Styling for content */
+.content {
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* Styling for button container */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust the top margin */
+  margin-bottom: 20px; /* Adjust the bottom margin */
+}
+
+/* Styling for explore button */
+.explore-btn {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px; /* Adjust the border-radius for roundness */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Styling for explore button on hover */
+.explore-btn:hover {
+  background-color: #0056b3;
+}

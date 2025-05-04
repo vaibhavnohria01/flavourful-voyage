@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>India map</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="font.css">
+        <meta charset="UTF-8">
+    </head>
+    <body class="body-edit">
+      <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo"><a href="index.html">FlavourfulVoyage</a></div>
+          <ul>
+            <li><a href="index.html" aria-label="Homepage">Homepage</a></li>    
+            <li><a href="Me.html" aria-label="About The Author">About The Author</a></li>
+            <li><a href="AboutUs.html" aria-label="About Us">About Us</a></li>
+            <li><a href="feedback.html" aria-label="Feedback">Feedback</a></li>
+            <li><a href="SourceLog.html" aria-label="Sourcelog">Sourcelog</a></li>
+            <li><a href="SiteMap.html" aria-label="Site Map">Site Map</a></li>
+            <li><a href="YoutubeFeed.html" aria-label="YouTube Feed">YouTube Feed</a></li>
+            <li><a href="Quiz.html" aria-label="Game">Game</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="heading-container-image">
+        <img src="images/moon.png" id="icon2" alt="Moon picture">
+        <img src="images/top_icon.png" id="scroll-to-top" alt="top icon to scroll">
+        <img src="images/kerala_text.png" id="heading-image" alt="heading">
+      </div>
+      <br>
+      <br>
+      <div class="video-container">
+        <video controls>
+            <source src="videos/Kerala.mp4" type="video/mp4">
+        </video>
+    </div>
+    <br>
+    <br>
+    <div class="text-photo-container">
+      <div class="text">
+        <p>Welcome to Kerala, where a symphony of lush greenery, tranquil backwaters, vibrant culture, and delectable cuisine awaits your senses. Explore the enchanting beauty of Kerala's landscapes, from the emerald tea plantations of Munnar to the serene backwaters of Alleppey, where houseboats glide gently along palm-fringed canals. Immerse yourself in the rich culture of Kerala, where traditional dance forms like Kathakali and Mohiniyattam captivate audiences with their graceful movements and elaborate costumes. Savor the flavors of Kerala's cuisine, with its tantalizing array of dishes like spicy fish curry, fluffy appam, and creamy payasam, each bursting with the aromatic spices and fresh ingredients that define the region's culinary heritage. Discover the spiritual essence of Kerala, with its ancient temples, tranquil ashrams, and sacred sites that offer moments of peace and reflection amidst the natural beauty. Whether you're indulging in an Ayurvedic massage in the hill stations of Wayanad, trekking through the dense forests of Thekkady, or simply lounging on the sun-kissed beaches of Kovalam, Kerala promises an unforgettable journey filled with warmth, beauty, and cultural richness.</p>
+      </div>
+      <div class = "photo-gallery-image">
+        <img src="images/kerala.png" alt="image">
+      </div>
+    </div>
+    <br>
+    <br> 
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/kerala_food.png" alt="food">
+      </div>
+      <div class="photo-text">
+        <p><b>My favourite food:</b> "Malabar Flatbread with Kerala beef curry"</p>
+      </div>
+    </div>
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/kerala_place.png" alt="place">
+      </div>
+      <div class="photo-text">
+        <p><b>A place must to visit:</b> "Munnar"</p>
+        <p><b>Best time to visit:</b> throughout the year </p>
+      </div>
+    </div>
+    <br>
+    <p class="fun-fact"><b>Fun Fact:</b> Kerala's rich tradition of Ayurveda, coupled with its natural beauty and hospitality, makes it a global destination for holistic healing and wellness tourism, offering visitors an opportunity to rejuvenate their body, mind, and spirit through the ancient wisdom of Ayurveda.</p>
+      <br>
+      <div class="btn-container">
+        <button class="explore-btn" onclick="location.href='india.html'">Resurface on the Map</button>
+      </div>
+      <script>
+        var icon2 = document.getElementById("icon2");
+        icon2.onclick = function(){
+          document.body.classList.toggle("dark-theme");
+          document.querySelectorAll('img').forEach(function(img) {img.classList.toggle("grayscale");});
+          if(document.body.classList.contains("dark-theme")){
+            icon2.src = "images/sun.png";
+          }
+          else{
+            icon2.src = "images/moon.png";
+          }
+
+          icon2.classList.add("clicked");
+          setTimeout(function(){icon2.classList.remove("clicked");}, 200);
+        }
+
+        document.getElementById("scroll-to-top").addEventListener("click", function(){
+          window.scrollTo({top:0, behavior:"smooth"});
+        });
+
+      </script>
+      </body>
+      </html>

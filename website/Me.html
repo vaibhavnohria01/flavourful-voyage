@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>About the authot</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="font.css">
+        <meta charset="UTF-8">
+  </head>
+          <body class="body-edit">
+            <nav class="navbar">
+                <div class="navdiv">
+                  <div class="logo"><a href="index.html">FlavourfulVoyage</a></div>
+                  <ul>
+                    <li><a href="index.html" aria-label="Homepage">Homepage</a></li>    
+                    <li><a href="Me.html" aria-label="About The Author">About The Author</a></li>
+                    <li><a href="AboutUs.html" aria-label="About Us">About Us</a></li>
+                    <li><a href="feedback.html" aria-label="Feedback">Feedback</a></li>
+                    <li><a href="SourceLog.html" aria-label="Sourcelog">Sourcelog</a></li>
+                    <li><a href="SiteMap.html" aria-label="Site Map">Site Map</a></li>
+                    <li><a href="YoutubeFeed.html" aria-label="YouTube Feed">YouTube Feed</a></li>
+                    <li><a href="Quiz.html" aria-label="Game">Game</a></li>
+                  </ul>
+                </div>
+              </nav>
+            
+              <div class="heading-container">
+                <img src="images/moon.png" id="icon" alt="Moon picture">
+                    <img src="images/top_icon.png" id="scroll-to-top" alt="top icon to scroll">
+                <h1 class="heading">About the Author!!</h1>
+            </div>
+            <div class="square-container">
+                <div class="square" id="square">
+                    <p class="content">Hello! I'm Vaibhav Nohria, a Master of Computing student at ANU. Originally from Delhi, India, I'm passionate about technology 
+                        and exploration. When not diving into tech, I enjoy table tennis matches, diving into captivating books, and losing myself in the melodies of 
+                        the violin. Soccer and music are constant companions in my life. India's diverse cultures fascinate me, from the bustling streets of Delhi to 
+                        the serene backwaters of Kerala. Old Delhi's historical charm and vibrant mix of languages and traditions captivate the senses. Nature is my 
+                        sanctuary, and hiking through its wonders is how I find peace and inspiration. Travel isn't just a hobby; it's an integral part of who I am. 
+                        Exploring new cultures, savouring diverse cuisines, and discovering the beauty of different landscapes invigorate me. I'm always looking for the 
+                        latest tech trends, eager to push boundaries and embrace innovation. Join me on this journey of discovery and growth!</p>
+                </div>
+            </div>
+            <script>     
+              var icon = document.getElementById("icon");
+              icon.onclick = function(){
+                  document.body.classList.toggle("dark-theme");
+                  if(document.body.classList.contains("dark-theme")){
+                      icon.src = "images/sun.png";
+                      square.style.backgroundColor = "#B76E79";
+                  } else {
+                      icon.src = "images/moon.png";
+                      square.style.backgroundColor = "";
+                  }
+          
+                  // Add the clicked class to trigger the click effect
+                  icon.classList.add("clicked");
+          
+                  // Remove the clicked class after a short delay
+                  setTimeout(function(){
+                      icon.classList.remove("clicked");
+                  }, 200);
+              }
+
+              document.getElementById("scroll-to-top").addEventListener("click", function(){
+          window.scrollTo({top:0, behavior:"smooth"});
+        });
+          </script>
+            </body>
+</html>

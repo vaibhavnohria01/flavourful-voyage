@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Reflection</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="font.css">
+        <meta charset="UTF-8">
+    </head>
+            <body class="body-edit">
+                <nav class="navbar">
+                    <div class="navdiv" id="navigation">
+                      <div class="logo"><a href="index.html">FlavourfulVoyage</a></div>
+                      <ul>
+                        <li><a href="index.html" aria-label="Homepage">Homepage</a></li>    
+                        <li><a href="Me.html" aria-label="About The Author">About The Author</a></li>
+                        <li><a href="AboutUs.html" aria-label="About Us">About Us</a></li>
+                        <li><a href="feedback.html" aria-label="Feedback">Feedback</a></li>
+                        <li><a href="SourceLog.html" aria-label="Sourcelog">Sourcelog</a></li>
+                        <li><a href="SiteMap.html" aria-label="Site Map">Site Map</a></li>
+                        <li><a href="YoutubeFeed.html" aria-label="YouTube Feed">YouTube Feed</a></li>
+                        <li><a href="Quiz.html" aria-label="Game">Game</a></li>
+                    </ul>
+                    </div>
+                  </nav>
+                <div class="heading-container">
+                    <img src="images/moon.png" id="icon2" alt="Moon picture">
+                    <img src="images/top_icon.png" id="scroll-to-top" alt="top icon to scroll">
+                    <h1 class="heading">Reflective Piece!!</h1>
+                </div>
+                <div class="content-reflection">
+                            <p>Embarking on my web development journey has significantly enhanced my skills and deepened my comprehension of the intricate process of building online platforms. Mastering technologies like HTML, CSS, and JavaScript felt like piecing together a complex mosaic, with each coding language contributing its unique hue to the digital canvas.</p> 
+                            <br>
+                            <p>The methodical approach of the course, emphasizing practical learning, has been instrumental in my evolution as a web developer. Developing our website in three phases mirrored the gradual progression of real-world projects. Starting with the groundwork in HTML, refining its visual appeal using CSS, and incorporating interactivity through JavaScript underscored the significance of incremental enhancement and perfection.</p>
+                            <br>
+                            <p>Reflecting on the experience, I now recognize where I could have gained insights sooner. The significance of responsive design became apparent as I strived to ensure a seamless user experience across various devices. The integration of accessibility features also emerged as a pivotal consideration, highlighting the aim of universal web accessibility. Additionally, organizing and streamlining code proved to be a learning curve, and I now perceive opportunities for more effective and refined coding practices.</p>
+                            <br>
+                            <p>Nevertheless, the predominant sentiment is the satisfaction of creation—witnessing code amalgamate to form a functional and aesthetically pleasing website. Overcoming challenges and making design decisions showcased the resilience and creativity that characterize web development. Equipped with augmented knowledge and a profound appreciation for the complexities of the digital realm, I carry invaluable lessons from this immersive experience—a journey propelled by curiosity, perseverance, and an unrelenting pursuit of expertise in web design.</p>
+                        </div>
+                                <script>
+                                    var icon2 = document.getElementById("icon2");
+                                    icon2.onclick = function(){
+                                      document.body.classList.toggle("dark-theme");
+                                      document.querySelectorAll('img').forEach(function(img) {img.classList.toggle("grayscale");});
+                                      if(document.body.classList.contains("dark-theme")){
+                                        icon2.src = "images/sun.png";
+                                      }
+                                      else{
+                                        icon2.src = "images/moon.png";
+                                      }
+                            
+                                      icon2.classList.add("clicked");
+                                      setTimeout(function(){icon2.classList.remove("clicked");}, 200);
+                                    }
+                            
+                                    document.getElementById("scroll-to-top").addEventListener("click", function(){
+                                      window.scrollTo({top:0, behavior:"smooth"});
+                                    });
+                                  </script>
+                </body>
+</html>

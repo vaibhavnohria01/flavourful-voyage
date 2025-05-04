@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Site Map</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="font.css">
+</head>
+<body class="body-edit">
+    <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo"><a href="index.html">FlavourfulVoyage</a></div>
+          <ul>
+            <li><a href="index.html" aria-label="Homepage">Homepage</a></li>    
+            <li><a href="Me.html" aria-label="About The Author">About The Author</a></li>
+            <li><a href="AboutUs.html" aria-label="About Us">About Us</a></li>
+            <li><a href="feedback.html" aria-label="Feedback">Feedback</a></li>
+            <li><a href="SourceLog.html" aria-label="Sourcelog">Sourcelog</a></li>
+            <li><a href="SiteMap.html" aria-label="Site Map">Site Map</a></li>
+            <li><a href="YoutubeFeed.html" aria-label="YouTube Feed">YouTube Feed</a></li>
+            <li><a href="Quiz.html" aria-label="Game">Game</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="heading-container">
+        <img src="images/moon.png" id="icon2" alt="Moon picture">
+        <img src="images/top_icon.png" id="scroll-to-top" alt="top icon to scroll">
+        <h1 class="heading">Site Map</h1>
+    </div>
+    <div class="sitemap-container">
+      <div class="sitemap">
+        <h1>Site Map</h1>
+        <ul>
+          <li><a href="index.html">Home Page</a>
+            
+            <ul>
+              <li><a href="india.html">India Map Page</a>
+                <ul>
+                  <li><a href="Andaman&Nicobar.html">Andaman & Nicobar</a></li>
+                  <li><a href="Telangana.html">Telangana</a></li>
+                  <li><a href="AndhraPradesh.html">Andhra Pradesh</a></li>
+                  <li><a href="ArunachalPradesh.html">Arunachal Pradesh</a></li>
+                  <li><a href="Assam.html">Assam</a></li>
+                  <li><a href="Bihar.html">Bihar</a></li>
+                  <li><a href="Chandigarh.html">Chandigarh</a></li>
+                  <li><a href="Chhattisgarh.html">Chhattisgarh</a></li>
+                  <li><a href="Dādra&NagarDamān&Diu.html">Dādra & Nagar Damān & Diu</a></li>
+                  <li><a href="Delhi.html">Delhi</a></li>
+                  <li><a href="Goa.html">Goa</a></li>
+                  <li><a href="Gujarat.html">Gujarat</a></li>
+                  <li><a href="Harayana.html">Harayana</a></li>
+                  <li><a href="HimachalPradesh.html">Himachal Pradesh</a></li>
+                  <li><a href="Jharkhand.html">Jharkhand</a></li>
+                  <li><a href="Karnataka.html">Karnataka</a></li>
+                  <li><a href="Kerala.html">Kerala</a></li>
+                  <li><a href="MadhyaPradesh.html">Madhya Pradesh</a></li>
+                  <li><a href="Maharashtra.html">Maharashtra</a></li>
+                  <li><a href="Manipur.html">Manipur</a></li>
+                  <li><a href="Meghalaya.html">Meghalaya</a></li>
+                  <li><a href="Mizoram.html">Mizoram</a></li>
+                  <li><a href="Nagaland.html">Nagaland</a></li>
+                  <li><a href="Orissa.html">Orissa</a></li>
+                  <li><a href="Puducherry.html">Puducherry</a></li>
+                  <li><a href="Punjab.html">Punjab</a></li>
+                  <li><a href="Rajasthan.html">Rajasthan</a></li>
+                  <li><a href="Sikkim.html">Sikkim</a></li>
+                  <li><a href="TamilNadu.html">Tamil Nadu</a></li>
+                  <li><a href="Tripura.html">Tripura</a></li>
+                  <li><a href="UttarPradesh.html">Uttar Pradesh</a></li>
+                  <li><a href="Uttarakhand.html">Uttarakhand</a></li>
+                  <li><a href="WestBengal.html">West Bengal</a></li>
+                  <li><a href="Lakshadweep.html">Lakshadweep</a></li>
+                  <li><a href="Jammu&Kashmir.html">Jammu & Kashmir</a></li>
+                  <li><a href="Ladakh.html">Ladakh</a></li>
+                </ul>
+              </li>
+              <li><a href="image-gallery.html">Image Gallery</a>
+                <ul>
+                  <li><a href="ValidationReportPage.html">Validation Report Screenshot Page</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="Me.html">About the Author Page</a></li>
+          <li><a href="AboutUs.html">About the Website Page</a></li>
+          <li><a href="feedback.html">Feedback Page</a></li>
+          <li><a href="SourceLog.html">Source Log Page</a></li>
+          <li><a href="SiteMap.html">Sitemap Page</a></li>
+          <li><a href="YoutubeFeed.html">YouTube Feed Page</a></li>
+          <li><a href="Quiz.html">Game Page</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      var icon2 = document.getElementById("icon2");
+      icon2.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+        document.querySelectorAll('img').forEach(function(img) {img.classList.toggle("grayscale");});
+        if(document.body.classList.contains("dark-theme")){
+          icon2.src = "images/sun.png";
+        }
+        else{
+          icon2.src = "images/moon.png";
+        }
+
+        icon2.classList.add("clicked");
+        setTimeout(function(){icon2.classList.remove("clicked");}, 200);
+      }
+
+      document.getElementById("scroll-to-top").addEventListener("click", function(){
+        window.scrollTo({top:0, behavior:"smooth"});
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Image Gallery</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="font.css">
+        <link rel="stylesheet" href="gallary.css">
+        <meta charset="UTF-8">
+    </head>
+    <body class="body-edit">
+      <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo"><a href="index.html">FlavourfulVoyage</a></div>
+          <ul>
+            <li><a href="index.html" aria-label="Homepage">Homepage</a></li>    
+            <li><a href="Me.html" aria-label="About The Author">About The Author</a></li>
+            <li><a href="AboutUs.html" aria-label="About Us">About Us</a></li>
+            <li><a href="feedback.html" aria-label="Feedback">Feedback</a></li>
+            <li><a href="SourceLog.html" aria-label="Sourcelog">Sourcelog</a></li>
+            <li><a href="SiteMap.html" aria-label="Site Map">Site Map</a></li>
+            <li><a href="YoutubeFeed.html" aria-label="YouTube Feed">YouTube Feed</a></li>
+            <li><a href="Quiz.html" aria-label="Game">Game</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="heading-container-image">
+        <img src="images/moon.png" id="icon2" alt="Moon picture">
+        <img src="images/top_icon.png" id="scroll-to-top" alt="top icon to scroll">
+        <img src="images/image_gallery.png" id="heading-image" alt="heading for the page">
+      </div>
+
+          <div class="expand-image" id="expanding">
+            <img src="images/ArunachalPradesh.png" id="changingafterclick" alt="image">
+            <span onclick="CloseImage()">X</span>
+          </div> 
+          <div class="image-gallery">
+            <img src="images/ArunachalPradesh.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/Chattisgarh.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/Haryana.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/Maharashtra.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/Assam.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/delhi.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/Goa.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/Gujarat.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/HimachalPradesh.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/karnataka.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/kerala.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/manipur.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/punjab.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/rajasthan.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/TamilNadu.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/UttarPradesh.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/AndhraPradesh.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/bihar.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/J&K.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/westbengal.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/madhya.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/Meghalaya.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/mizoram.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/nagaland.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/uttarakhand.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/tripura.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/sikkim.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/puducherry.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/ladakh.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/andaman.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/lakshadweep.png" onclick="OpenImage(this.src)" alt="image">
+            <img src="images/dadra&nagar.png" onclick="OpenImage(this.src)" alt="image">
+          </div>
+
+          <br>
+        <div class="btn-container">
+          <button class="explore-btn" onclick="location.href='ValidationReportPage.html'">Validation Report Page</button>
+        </div>
+
+          <script>
+            var expanding = document.getElementById("expanding");
+            var changingafterclick = document.getElementById("changingafterclick");
+
+            function OpenImage(picture){
+                expanding.style.display = "flex";
+                changingafterclick.src = picture;
+            }
+
+            function CloseImage(){
+                expanding.style.display = "none";
+            }
+
+            var icon2 = document.getElementById("icon2");
+        icon2.onclick = function(){
+          document.body.classList.toggle("dark-theme");
+          document.querySelectorAll('img').forEach(function(img) {img.classList.toggle("grayscale");});
+          if(document.body.classList.contains("dark-theme")){
+            icon2.src = "images/sun.png";
+          }
+          else{
+            icon2.src = "images/moon.png";
+          }
+
+          icon2.classList.add("clicked");
+          setTimeout(function(){icon2.classList.remove("clicked");}, 200);
+        }
+
+        document.getElementById("scroll-to-top").addEventListener("click", function(){
+          window.scrollTo({top:0, behavior:"smooth"});
+        });
+          </script>
+    </body>
+</html>
