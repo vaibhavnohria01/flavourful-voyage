@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>India map</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="font.css">
+        <meta charset="UTF-8">
+    </head>
+    <body class="body-edit">
+      <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo"><a href="index.html">FlavourfulVoyage</a></div>
+          <ul>
+            <li><a href="index.html" aria-label="Homepage">Homepage</a></li>    
+            <li><a href="Me.html" aria-label="About The Author">About The Author</a></li>
+            <li><a href="AboutUs.html" aria-label="About Us">About Us</a></li>
+            <li><a href="feedback.html" aria-label="Feedback">Feedback</a></li>
+            <li><a href="SourceLog.html" aria-label="Sourcelog">Sourcelog</a></li>
+            <li><a href="SiteMap.html" aria-label="Site Map">Site Map</a></li>
+            <li><a href="YoutubeFeed.html" aria-label="YouTube Feed">YouTube Feed</a></li>
+            <li><a href="Quiz.html" aria-label="Game">Game</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="heading-container-image">
+        <img src="images/moon.png" id="icon2" alt="Moon picture">
+        <img src="images/top_icon.png" id="scroll-to-top" alt="top icon to scroll">
+        <img src="images/jharkhand_text.png" id="heading-image" alt="heading">
+      </div>
+      <br>
+      <br>
+      <div class="video-container">
+        <video controls>
+            <source src="videos/jharkhand.mp4" type="video/mp4">
+        </video>
+    </div>
+    <br>
+    <br>
+    <div class="text-photo-container">
+      <div class="text">
+        <p>Welcome to Jharkhand, where untamed wilderness, tribal heritage, vibrant culture, and natural wonders await your exploration. Explore the rugged beauty of Jharkhand's landscapes, from dense forests and rolling hills to cascading waterfalls and serene rivers. Immerse yourself in the rich tribal culture of the region, where ancient traditions are preserved with pride, and colorful festivals like Sarhul and Karma bring communities together in joyful celebration. Savor the flavors of Jharkhandi cuisine, with its hearty dishes like litti-chokha and dhuska, each bite a reflection of the region's rustic charm and culinary ingenuity. Discover the spiritual heritage of Jharkhand, with its sacred sites and pilgrimage centers that offer moments of peace and reflection amidst the natural beauty. Whether you're trekking through the lush forests of Betla National Park, exploring the tribal villages of Ranchi, or simply enjoying the tranquility of its rural landscapes, Jharkhand promises an authentic and immersive experience that will leave you enchanted.</p>
+      </div>
+      <div class = "photo-gallery-image">
+        <img src="images/jharkhand.png" alt="image">
+      </div>
+    </div>
+    <br>
+    <br> 
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/jharkhand_food.png" alt="food">
+      </div>
+      <div class="photo-text">
+        <p><b>My favourite food:</b> "Litti Chokha"</p>
+      </div>
+    </div>
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/dassam.png" alt="place">
+      </div>
+      <div class="photo-text">
+        <p><b>A place must to visit:</b> "Dassam Falls"</p>
+        <p><b>Best time to visit:</b> between the months of July and March </p>
+      </div>
+    </div>
+    <br>
+    <p class="fun-fact"><b>Fun Fact:</b> Jharkhand's role in the mica industry highlights the state's rich mineral wealth and its significance in India's industrial and export sectors.</p>
+      <br>
+      <div class="btn-container">
+        <button class="explore-btn" onclick="location.href='india.html'">Resurface on the Map</button>
+      </div>
+      <script>
+        var icon2 = document.getElementById("icon2");
+        icon2.onclick = function(){
+          document.body.classList.toggle("dark-theme");
+          document.querySelectorAll('img').forEach(function(img) {img.classList.toggle("grayscale");});
+          if(document.body.classList.contains("dark-theme")){
+            icon2.src = "images/sun.png";
+          }
+          else{
+            icon2.src = "images/moon.png";
+          }
+
+          icon2.classList.add("clicked");
+          setTimeout(function(){icon2.classList.remove("clicked");}, 200);
+        }
+
+        document.getElementById("scroll-to-top").addEventListener("click", function(){
+          window.scrollTo({top:0, behavior:"smooth"});
+        });
+
+      </script>
+      </body>
+      </html>

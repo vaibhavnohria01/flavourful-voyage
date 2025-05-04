@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>India map</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="font.css">
+        <meta charset="UTF-8">
+    </head>
+    <body class="body-edit">
+      <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo"><a href="index.html">FlavourfulVoyage</a></div>
+          <ul>
+            <li><a href="index.html" aria-label="Homepage">Homepage</a></li>    
+            <li><a href="Me.html" aria-label="About The Author">About The Author</a></li>
+            <li><a href="AboutUs.html" aria-label="About Us">About Us</a></li>
+            <li><a href="feedback.html" aria-label="Feedback">Feedback</a></li>
+            <li><a href="SourceLog.html" aria-label="Sourcelog">Sourcelog</a></li>
+            <li><a href="SiteMap.html" aria-label="Site Map">Site Map</a></li>
+            <li><a href="YoutubeFeed.html" aria-label="YouTube Feed">YouTube Feed</a></li>
+            <li><a href="Quiz.html" aria-label="Game">Game</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="heading-container-image">
+        <img src="images/moon.png" id="icon2" alt="Moon picture">
+        <img src="images/top_icon.png" id="scroll-to-top" alt="top icon to scroll">
+        <img src="images/delhi_text.png" id="heading-image" alt="heading">
+      </div>
+      <br>
+      <br>
+      <div class="video-container">
+        <video controls>
+            <source src="videos/New_Delhi.mp4" type="video/mp4">
+        </video>
+    </div>
+    <br>
+    <br>
+    <div class="text-photo-container">
+      <div class="text">
+        <p>Discover Delhi, where the essence of India's capital beckons with a rich blend of culture, cuisine, tradition, beauty, and nature. 
+          Lose yourself in the labyrinthine lanes of Old Delhi, where ancient monuments stand as silent witnesses to bygone eras. Treat your taste buds 
+          to a symphony of flavors, from spicy street snacks to sumptuous royal feasts, each dish a testament to Delhi's culinary legacy. 
+          Immerse yourself in the city's vibrant traditions, where time-honored customs thrive alongside modern sensibilities, creating a dynamic cultural mosaic. 
+          Marvel at the architectural wonders that dot the cityscape, from the grandeur of Mughal forts to the serene tranquility of its verdant gardens. 
+          And amidst the urban bustle, find moments of serenity in Delhi's green oases, where nature's beauty flourishes amidst the concrete jungle. 
+          Experience Delhi – a city where every corner reveals a new facet of India's rich heritage.</p>
+      </div>
+      <div class = "photo-gallery-image">
+        <img src="images/delhi.png" alt="image">
+      </div>
+    </div>
+    <br>
+    <br> 
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/north_indian_platter.png" alt="food">
+      </div>
+      <div class="photo-text">
+        <p><b>My favourite food:</b> "Famous North Indian Platter"</p>
+      </div>
+    </div>
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/delhi_monument.png" alt="place">
+      </div>
+      <div class="photo-text">
+        <p><b>A place must to visit:</b> "Jama Masjid, Red Fort, Qutub Minar, Rastrapati Bhawan, India Gate"</p>
+        <p><b>Best time to visit:</b> Throughout the year </p>
+      </div>
+    </div>
+    <br>
+    <p class="fun-fact"><b>Fun Fact:</b> While Delhi is often celebrated for its Mughal-era monuments and colonial architecture, 
+      the Feroz Shah Kotla Observatory represents an intriguing aspect of the city's lesser-known history as a center for scientific 
+      inquiry and intellectual pursuit.</p>
+      <br>
+      <div class="btn-container">
+        <button class="explore-btn" onclick="location.href='india.html'">Resurface on the Map</button>
+      </div>
+      <script>
+        var icon2 = document.getElementById("icon2");
+        icon2.onclick = function(){
+          document.body.classList.toggle("dark-theme");
+          document.querySelectorAll('img').forEach(function(img) {img.classList.toggle("grayscale");});
+          if(document.body.classList.contains("dark-theme")){
+            icon2.src = "images/sun.png";
+          }
+          else{
+            icon2.src = "images/moon.png";
+          }
+
+          icon2.classList.add("clicked");
+          setTimeout(function(){icon2.classList.remove("clicked");}, 200);
+        }
+        document.getElementById("scroll-to-top").addEventListener("click", function(){
+          window.scrollTo({top:0, behavior:"smooth"});
+        });
+      </script>
+
+      </body>
+      </html>

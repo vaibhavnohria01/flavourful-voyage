@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>India map</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="font.css">
+        <meta charset="UTF-8">
+    </head>
+    <body class="body-edit">
+      <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo"><a href="index.html">FlavourfulVoyage</a></div>
+          <ul>
+            <li><a href="index.html" aria-label="Homepage">Homepage</a></li>    
+            <li><a href="Me.html" aria-label="About The Author">About The Author</a></li>
+            <li><a href="AboutUs.html" aria-label="About Us">About Us</a></li>
+            <li><a href="feedback.html" aria-label="Feedback">Feedback</a></li>
+            <li><a href="SourceLog.html" aria-label="Sourcelog">Sourcelog</a></li>
+            <li><a href="SiteMap.html" aria-label="Site Map">Site Map</a></li>
+            <li><a href="YoutubeFeed.html" aria-label="YouTube Feed">YouTube Feed</a></li>
+            <li><a href="Quiz.html" aria-label="Game">Game</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="heading-container-image">
+        <img src="images/moon.png" id="icon2" alt="Moon picture">
+        <img src="images/top_icon.png" id="scroll-to-top" alt="top icon to scroll">
+        <img src="images/Gujarat_text.png" id="heading-image" alt="heading">
+      </div>
+      <br>
+      <br>
+      <div class="video-container">
+        <video controls>
+            <source src="videos/Gujarat.mp4" type="video/mp4">
+        </video>
+    </div>
+    <br>
+    <br>
+    <div class="text-photo-container">
+      <div class="text">
+        <p>Step into Gujarat, where every corner reveals a vibrant tapestry of culture, cuisine, tradition, beauty, and nature. 
+          Delve into the diverse flavors of Gujarati cuisine, from the savory delights of dhokla and khandvi to the sweet indulgence of jalebi and fafda,
+           each dish a reflection of the region's culinary heritage and innovation. Immerse yourself in the timeless traditions of Gujarat,
+            where festivals like Navratri and Uttarayan fill the air with music, dance, and joyous celebrations, offering a glimpse into the heart of the 
+            state's cultural vibrancy. Marvel at the breathtaking beauty of Gujarat's landscape, from the vast salt flats of the Rann of Kutch, where the 
+            horizon stretches endlessly under the clear blue sky, to the lush greenery of Gir Forest, home to the majestic Asiatic lions and other exotic wildlife. 
+            Explore the serene beauty of Gujarat's coastline, where picturesque beaches, ancient temples, and bustling ports showcase the region's rich maritime 
+            heritage and natural splendor. In Gujarat, every moment is an invitation to discover the unique blend of culture, cuisine, tradition, beauty, and 
+            nature that makes this state truly extraordinary.</p>
+      </div>
+      <div class = "photo-gallery-image">
+        <img src="images/Gujarat.png" alt="image">
+      </div>
+    </div>
+    <br>
+    <br> 
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/gujarati_food.png" alt="food">
+      </div>
+      <div class="photo-text">
+        <p><b>My favourite food:</b> "gujarati platter"</p>
+      </div>
+    </div>
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/gir.png" alt="place">
+      </div>
+      <div class="photo-text">
+        <p><b>A place must to visit:</b> "Gir National Park"</p>
+        <p><b>Best time to visit:</b> December to March </p>
+      </div>
+    </div>
+    <br>
+    <p class="fun-fact"><b>Fun Fact:</b> Gujarat's dominance in the diamond industry underscores the state's entrepreneurial spirit, industrial prowess, 
+      and global competitiveness, making it a key player in the world's diamond market.</p>
+      <br>
+      <div class="btn-container">
+        <button class="explore-btn" onclick="location.href='india.html'">Resurface on the Map</button>
+      </div>
+      <script>
+        var icon2 = document.getElementById("icon2");
+        icon2.onclick = function(){
+          document.body.classList.toggle("dark-theme");
+          document.querySelectorAll('img').forEach(function(img) {img.classList.toggle("grayscale");});
+          if(document.body.classList.contains("dark-theme")){
+            icon2.src = "images/sun.png";
+          }
+          else{
+            icon2.src = "images/moon.png";
+          }
+
+          icon2.classList.add("clicked");
+          setTimeout(function(){icon2.classList.remove("clicked");}, 200);
+        }
+
+        document.getElementById("scroll-to-top").addEventListener("click", function(){
+          window.scrollTo({top:0, behavior:"smooth"});
+        });
+
+      </script>
+      </body>
+      </html>

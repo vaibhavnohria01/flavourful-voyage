@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>India map</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="font.css">
+        <meta charset="UTF-8">
+    </head>
+    <body class="body-edit">
+      <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo"><a href="index.html">FlavourfulVoyage</a></div>
+          <ul>
+            <li><a href="index.html" aria-label="Homepage">Homepage</a></li>    
+            <li><a href="Me.html" aria-label="About The Author">About The Author</a></li>
+            <li><a href="AboutUs.html" aria-label="About Us">About Us</a></li>
+            <li><a href="feedback.html" aria-label="Feedback">Feedback</a></li>
+            <li><a href="SourceLog.html" aria-label="Sourcelog">Sourcelog</a></li>
+            <li><a href="SiteMap.html" aria-label="Site Map">Site Map</a></li>
+            <li><a href="YoutubeFeed.html" aria-label="YouTube Feed">YouTube Feed</a></li>
+            <li><a href="Quiz.html" aria-label="Game">Game</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="heading-container-image">
+        <img src="images/moon.png" id="icon2" alt="Moon picture">
+        <img src="images/top_icon.png" id="scroll-to-top" alt="top icon to scroll">
+        <img src="images/assam_text.png" id="heading-image" alt="heading">
+      </div>
+      <br>
+      <br>
+      <div class="video-container">
+        <video controls>
+            <source src="videos/Assam.mp4" type="video/mp4">
+        </video>
+    </div>
+    <br>
+    <br>
+    <div class="text-photo-container">
+      <div class="text">
+        <p>Welcome to Assam, where a vibrant mosaic of culture, gastronomy, heritage, allure, and wilderness awaits, 
+          cradled by the mighty Brahmaputra. Immerse yourself in the dynamic fabric of Assamese culture, where timeless customs interweave with 
+          contemporary expressions, crafting a narrative of resilience and festivity. Delight your palate with the diverse palette of Assam's cuisine, 
+          from the fiery zest of bhut jolokia-infused delicacies to the subtle sweetness of pithas, each bite a passage through the region's culinary legacy. 
+          Engage with the pulsating pulse of Assam's traditions, where the cadence of Bihu dances and the hymns of Satras resonate amidst mist-kissed hills. 
+          Marvel at the natural splendor of the land, where verdant tea estates sprawl endlessly, and lush forests harbor a wealth of biodiversity. 
+          Explore the serene allure of Assam's rivers, where ancient rituals entwine with the gentle flow of water, beckoning you to embark on a voyage 
+          of contemplation and rejuvenation. In Assam, every moment is an evocative fusion of tradition and ingenuity, offering a glimpse into the spirit 
+          of the Northeast.</p>
+      </div>
+      <div class = "photo-gallery-image">
+        <img src="images/Assam.png" alt="image">
+      </div>
+    </div>
+    <br>
+    <br> 
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/assam_food.png" alt="food">
+      </div>
+      <div class="photo-text">
+        <p><b>My favourite food:</b> "Paror Mangxo (Pigeon Meat Curry)"</p>
+      </div>
+    </div>
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/assam_place.png" alt="place">
+      </div>
+      <div class="photo-text">
+        <p><b>A place must to visit:</b> "Kaziranga National Park"</p>
+        <p><b>Best time to visit:</b> November to april (park remains closed between may to october) </p>
+      </div>
+    </div>
+    <br>
+    <p class="fun-fact"><b>Fun Fact:</b> Assam is renowned worldwide for its tea production, but what many may not know is 
+      that it is home to the world's oldest tea bushes. The indigenous Assamica variety of the tea plant, Camellia sinensis var. 
+      assamica, is believed to have originated in the Assam region thousands of years ago.</p>
+      <br>
+      <div class="btn-container">
+        <button class="explore-btn" onclick="location.href='india.html'">Resurface on the Map</button>
+      </div>
+      <script>
+        var icon2 = document.getElementById("icon2");
+        icon2.onclick = function(){
+          document.body.classList.toggle("dark-theme");
+          document.querySelectorAll('img').forEach(function(img) {img.classList.toggle("grayscale");});
+          if(document.body.classList.contains("dark-theme")){
+            icon2.src = "images/sun.png";
+          }
+          else{
+            icon2.src = "images/moon.png";
+          }
+
+          icon2.classList.add("clicked");
+          setTimeout(function(){icon2.classList.remove("clicked");}, 200);
+        }
+        document.getElementById("scroll-to-top").addEventListener("click", function(){
+          window.scrollTo({top:0, behavior:"smooth"});
+        });
+      </script>
+
+      </body>
+      </html>

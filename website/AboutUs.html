@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>About Us</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="font.css">
+        <meta charset="UTF-8">
+    </head>
+            <body class="body-edit">
+                <nav class="navbar">
+                    <div class="navdiv" id="navigation">
+                      <div class="logo"><a href="index.html">FlavourfulVoyage</a></div>
+                      <ul>
+                        <li><a href="index.html" aria-label="Homepage">Homepage</a></li>    
+                        <li><a href="Me.html" aria-label="About The Author">About The Author</a></li>
+                        <li><a href="AboutUs.html" aria-label="About Us">About Us</a></li>
+                        <li><a href="feedback.html" aria-label="Feedback">Feedback</a></li>
+                        <li><a href="SourceLog.html" aria-label="Sourcelog">Sourcelog</a></li>
+                        <li><a href="SiteMap.html" aria-label="Site Map">Site Map</a></li>
+                        <li><a href="YoutubeFeed.html" aria-label="YouTube Feed">YouTube Feed</a></li>
+                        <li><a href="Quiz.html" aria-label="Game">Game</a></li>
+                    </ul>
+                    </div>
+                  </nav>
+                <div class="heading-container">
+                    <img src="images/moon.png" id="icon" alt="Moon picture">
+                    <img src="images/top_icon.png" id="scroll-to-top" alt="top icon to scroll">
+                    <h1 class="heading">About Us!!</h1>
+                </div>
+                    <div class="circle-container">
+                        <div class="circle" id="circle">
+                            <p class="content">Welcome to Flavourful Voyage! Embark with Vaibhav Nohria from Delhi, India, on a gastronomic exploration of India's exquisite cuisine, awe-inspiring 
+                                vistas, and profound cultural tapestry. Delight in the nuanced symphony of spices from bustling markets, relish epicurean delights spanning from 
+                                local culinary gems to Michelin-starred wonders. Traverse the majestic landscapes, from the verdant splendor of Kerala to the kaleidoscopic deserts 
+                                of Rajasthan. Immerse yourself in the rich tapestry of India's vibrant cultural mosaic, spanning ancient traditions to avant-garde artistic 
+                                expressions. Let us together revel in the flavors, vistas, and narratives of this exquisite journey with Flavourful Voyage!</p>
+                        </div>
+                    </div>  
+                
+                    <script>     
+                        var icon = document.getElementById("icon");
+                        icon.onclick = function(){
+                            document.body.classList.toggle("dark-theme");
+                            document.querySelectorAll('img').forEach(function(img) {img.classList.toggle("grayscale");});
+                            if(document.body.classList.contains("dark-theme")){
+                                icon.src = "images/sun.png";
+                                circle.style.backgroundColor = "#B76E79";
+                            } else {
+                                icon.src = "images/moon.png";
+                                circle.style.backgroundColor = "";
+                            }
+                    
+                            // Add the clicked class to trigger the click effect
+                            icon.classList.add("clicked");
+                    
+                            // Remove the clicked class after a short delay
+                            setTimeout(function(){
+                                icon.classList.remove("clicked");
+                            }, 200);
+                        }
+
+                        document.getElementById("scroll-to-top").addEventListener("click", function(){
+                         window.scrollTo({top:0, behavior:"smooth"});
+                        });
+                        
+                    </script>
+                </body>
+</html>

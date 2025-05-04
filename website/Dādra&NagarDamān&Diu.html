@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>India map</title>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="font.css">
+        <meta charset="UTF-8">
+    </head>
+    <body class="body-edit">
+      <nav class="navbar">
+        <div class="navdiv">
+          <div class="logo"><a href="index.html">FlavourfulVoyage</a></div>
+          <ul>
+            <li><a href="index.html" aria-label="Homepage">Homepage</a></li>    
+            <li><a href="Me.html" aria-label="About The Author">About The Author</a></li>
+            <li><a href="AboutUs.html" aria-label="About Us">About Us</a></li>
+            <li><a href="feedback.html" aria-label="Feedback">Feedback</a></li>
+            <li><a href="SourceLog.html" aria-label="Sourcelog">Sourcelog</a></li>
+            <li><a href="SiteMap.html" aria-label="Site Map">Site Map</a></li>
+            <li><a href="YoutubeFeed.html" aria-label="YouTube Feed">YouTube Feed</a></li>
+            <li><a href="Quiz.html" aria-label="Game">Game</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="heading-container-image">
+        <img src="images/moon.png" id="icon2" alt="Moon picture">
+        <img src="images/top_icon.png" id="scroll-to-top" alt="top icon to scroll">
+        <img src="images/dadra&nagar_text.png" id="heading-image" alt="heading">
+      </div>
+      <br>
+      <br>
+      <div class="video-container">
+        <video controls>
+            <source src="videos/Diu.mp4" type="video/mp4">
+        </video>
+    </div>
+    <br>
+    <br>
+    <div class="text-photo-container">
+      <div class="text">
+        <p>Embark on an extraordinary journey to Dadra and Nagar Haveli and Daman and Diu, where a rich tapestry of culture, cuisine, tradition, beauty, 
+          and nature awaits your exploration. Immerse yourself in the vibrant fusion of cultures that converge in this unique union of territories, each with 
+          its own distinctive charm and allure. Delight your palate with the tantalizing flavors of local delicacies, where the spicy tang of coastal cuisine 
+          meets the earthy richness of tribal fare, creating a culinary mosaic that reflects the region's diverse heritage. Experience the timeless traditions 
+          of Dadra and Nagar Haveli and Daman and Diu, where ancient customs and rituals are celebrated with fervor, weaving a colorful tapestry of festivities 
+          and ceremonies. Marvel at the breathtaking beauty of the landscape, from the serene beaches and tranquil lakes to the lush forests and rolling hills 
+          that dot the region. Explore the pristine wilderness of its national parks and wildlife sanctuaries, where rare species thrive in their natural habitat, 
+          offering glimpses of untamed beauty at every turn. In Dadra and Nagar Haveli and Daman and Diu, every moment is a unique blend of culture, cuisine, 
+          tradition, beauty, and nature, inviting you to discover the essence of this enchanting destination.</p>
+      </div>
+      <div class = "photo-gallery-image">
+        <img src="images/dadra&nagar.png" alt="image">
+      </div>
+    </div>
+    <br>
+    <br> 
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/daman_food.png" alt="food">
+      </div>
+      <div class="photo-text">
+        <p><b>My favourite food:</b> "chicken xacuti"</p>
+      </div>
+    </div>
+    <div class="favourite-things-container">
+      <div class="photo">
+        <img src="images/satmalia.png" alt="place">
+      </div>
+      <div class="photo-text">
+        <p><b>A place must to visit:</b> "satmalia deer sanctuary"</p>
+        <p><b>Best time to visit:</b> throughout the year (early morning hours) </p>
+      </div>
+    </div>
+    <br>
+    <p class="fun-fact"><b>Fun Fact:</b> The Portuguese Colonial Legacy of Dadra and Nagar Haveli and Daman and Diu adds a 
+      fascinating dimension to their cultural identity, making them intriguing destinations for exploration and discovery.</p>
+      <br>
+      <div class="btn-container">
+        <button class="explore-btn" onclick="location.href='india.html'">Resurface on the Map</button>
+      </div>
+      <script>
+        var icon2 = document.getElementById("icon2");
+        icon2.onclick = function(){
+          document.body.classList.toggle("dark-theme");
+          document.querySelectorAll('img').forEach(function(img) {img.classList.toggle("grayscale");});
+          if(document.body.classList.contains("dark-theme")){
+            icon2.src = "images/sun.png";
+          }
+          else{
+            icon2.src = "images/moon.png";
+          }
+
+          icon2.classList.add("clicked");
+          setTimeout(function(){icon2.classList.remove("clicked");}, 200);
+        }
+
+        document.getElementById("scroll-to-top").addEventListener("click", function(){
+          window.scrollTo({top:0, behavior:"smooth"});
+        });
+
+      </script>
+      </body>
+      </html>
